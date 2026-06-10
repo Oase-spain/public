@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="OASE Wellness Clinic – Luxury IV Therapy & Longevity Medicine in Alicante, Spain. Personalized protocols. Medically supervised. German pharmaceutical-grade formulations.">
+<title>OASE Wellness Clinic | IV Therapy & Longevity Medicine · Alicante</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #162336;
+    --gold: #c9a84c;
+    --gold-light: #e2c97e;
+    --gold-pale: #f0e4c2;
+    --ivory: #faf7f2;
+    --beige: #f2ede4;
+    --text: #1a1a1a;
+    --text-light: #5a5a5a;
+    --white: #ffffff;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--ivory);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--navy); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 0 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    transition: background 0.5s, box-shadow 0.5s;
+  }
+  nav.scrolled {
+    background: rgba(13,27,42,0.97);
+    box-shadow: 0 1px 0 rgba(201,168,76,0.2);
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    color: var(--white);
+    text-decoration: none;
+    display: flex; flex-direction: column; line-height: 1;
+  }
+  .nav-logo span {
+    font-family: var(--sans);
+    font-size: 0.52rem;
+    letter-spacing: 0.35em;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 3px;
+  }
+  .nav-links {
+    display: flex; gap: 2.5rem; list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-cta {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    padding: 0.55rem 1.4rem;
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+  .nav-cta:hover { background: var(--gold); color: var(--navy); }
+
+  /* hamburger */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 1px; background: var(--white); transition: 0.3s; }
+  .mobile-menu {
+    display: none; position: fixed; inset: 0; background: var(--navy);
+    z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    color: var(--white); text-decoration: none; font-family: var(--serif);
+    font-size: 2rem; letter-spacing: 0.1em;
+  }
+  .mobile-close {
+    position: absolute; top: 1.5rem; right: 1.5rem;
+    background: none; border: none; color: var(--gold); font-size: 2rem; cursor: pointer;
+  }
+
+  /* ── HERO ── */
+  #hero {
+    position: relative; height: 100vh; min-height: 700px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1555631683-7b2a4967f7b4?w=1920&q=85&fit=crop');
+    background-size: cover; background-position: center 30%;
+    filter: brightness(0.55);
+    transform: scale(1.04);
+    animation: slowzoom 18s ease forwards;
+  }
+  @keyframes slowzoom {
+    from { transform: scale(1.04); }
+    to   { transform: scale(1.00); }
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(160deg, rgba(13,27,42,0.5) 0%, rgba(13,27,42,0.2) 60%, rgba(13,27,42,0.6) 100%);
+  }
+  .hero-content {
+    position: relative; text-align: center;
+    padding: 0 1.5rem; max-width: 860px;
+    animation: fadeUp 1.4s 0.3s both ease;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-eyebrow {
+    font-family: var(--sans); font-size: 0.65rem;
+    letter-spacing: 0.38em; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: 1.8rem;
+  }
+  .hero-h1 {
+    font-family: var(--serif); font-size: clamp(3rem,7vw,6.5rem);
+    font-weight: 300; line-height: 1.0; color: var(--white);
+    letter-spacing: 0.02em; margin-bottom: 1.6rem;
+  }
+  .hero-h1 em { font-style: italic; color: var(--gold-light); }
+  .hero-sub {
+    font-family: var(--sans); font-size: 0.95rem; font-weight: 300;
+    color: rgba(255,255,255,0.82); line-height: 1.9;
+    letter-spacing: 0.06em; margin-bottom: 2.8rem; max-width: 540px; margin-left: auto; margin-right: auto;
+  }
+  .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; }
+  .btn-primary {
+    background: var(--gold); color: var(--navy);
+    border: none; padding: 0.9rem 2.2rem;
+    font-family: var(--sans); font-size: 0.7rem; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    cursor: pointer; text-decoration: none; transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent; color: var(--white);
+    border: 1px solid rgba(255,255,255,0.55); padding: 0.9rem 2.2rem;
+    font-family: var(--sans); font-size: 0.7rem; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    cursor: pointer; text-decoration: none; transition: border-color 0.3s, color 0.3s;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold-light); }
+  .hero-stars { color: rgba(255,255,255,0.7); font-size: 0.72rem; letter-spacing: 0.12em; }
+  .hero-stars strong { color: var(--gold-light); font-weight: 400; font-size: 1rem; }
+  .scroll-indicator {
+    position: absolute; bottom: 2.2rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+    color: rgba(255,255,255,0.4); font-size: 0.55rem; letter-spacing: 0.3em; text-transform: uppercase;
+  }
+  .scroll-line {
+    width: 1px; height: 40px; background: linear-gradient(var(--gold), transparent);
+    animation: scrollpulse 2s infinite;
+  }
+  @keyframes scrollpulse { 0%,100%{opacity:0.3} 50%{opacity:1} }
+
+  /* ── SHARED SECTION ── */
+  section { padding: 7rem 5vw; }
+  .section-label {
+    font-family: var(--sans); font-size: 0.6rem;
+    letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.2rem; display: block;
+  }
+  .section-h2 {
+    font-family: var(--serif); font-size: clamp(2.4rem,4vw,4rem);
+    font-weight: 300; line-height: 1.15; letter-spacing: 0.02em;
+    color: var(--navy); margin-bottom: 1.4rem;
+  }
+  .section-h2.light { color: var(--white); }
+  .section-h2 em { font-style: italic; color: var(--gold); }
+  .section-p {
+    font-family: var(--sans); font-size: 0.92rem; font-weight: 300;
+    color: var(--text-light); line-height: 1.9; max-width: 560px;
+  }
+  .section-p.light { color: rgba(255,255,255,0.7); }
+  .gold-rule { width: 48px; height: 1px; background: var(--gold); margin-bottom: 2rem; }
+
+  /* ── INTRO STRIP ── */
+  #intro {
+    background: var(--navy); padding: 3rem 5vw;
+    display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; justify-content: center;
+  }
+  .intro-stat {
+    text-align: center; flex: 1; min-width: 140px;
+  }
+  .intro-stat strong {
+    display: block; font-family: var(--serif); font-size: 2.6rem; font-weight: 300;
+    color: var(--gold-light); letter-spacing: 0.04em;
+  }
+  .intro-stat span {
+    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(255,255,255,0.55); font-weight: 300;
+  }
+  .intro-divider { width: 1px; height: 50px; background: rgba(201,168,76,0.3); }
+
+  /* ── METHOD ── */
+  #method { background: var(--ivory); }
+  .method-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; max-width: 1200px; margin: 0 auto;
+  }
+  .method-visual {
+    position: relative; border-radius: 0;
+    overflow: hidden; aspect-ratio: 4/5;
+  }
+  .method-visual img { width: 100%; height: 100%; object-fit: cover; }
+  .method-visual::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(13,27,42,0.35) 0%, transparent 50%);
+  }
+  .method-steps { padding-top: 1rem; }
+  .method-step {
+    display: flex; gap: 1.8rem; align-items: flex-start;
+    padding: 1.8rem 0; border-bottom: 1px solid rgba(0,0,0,0.07);
+  }
+  .step-num {
+    font-family: var(--serif); font-size: 2.2rem; font-weight: 300;
+    color: var(--gold); line-height: 1; flex-shrink: 0; width: 2.5rem; text-align: right;
+  }
+  .step-body h4 {
+    font-family: var(--serif); font-size: 1.15rem; font-weight: 400;
+    color: var(--navy); margin-bottom: 0.35rem;
+  }
+  .step-body p { font-size: 0.82rem; font-weight: 300; color: var(--text-light); line-height: 1.7; }
+
+  /* ── SCIENCE ── */
+  #science {
+    background: var(--navy);
+    background-image: url('https://images.unsplash.com/photo-1504474298698-ea84535b2553?w=1920&q=80&fit=crop');
+    background-blend-mode: multiply; background-size: cover; background-position: center;
+  }
+  .science-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+  .science-pills {
+    display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 3rem;
+  }
+  .pill {
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--gold-light); padding: 0.5rem 1.3rem;
+    font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 300;
+  }
+
+  /* ── SERVICES ── */
+  #services { background: var(--beige); }
+  .services-header { text-align: center; max-width: 640px; margin: 0 auto 4rem; }
+  .services-header .section-p { margin: 0 auto; }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2px; max-width: 1300px; margin: 0 auto;
+  }
+  .service-card {
+    background: var(--white); padding: 2.8rem 2.4rem;
+    transition: background 0.4s, transform 0.3s;
+    position: relative; overflow: hidden;
+    cursor: default;
+  }
+  .service-card::before {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 0; height: 2px; background: var(--gold);
+    transition: width 0.4s;
+  }
+  .service-card:hover::before { width: 100%; }
+  .service-card:hover { background: var(--navy); }
+  .service-card:hover .sc-icon svg path,
+  .service-card:hover .sc-icon svg circle,
+  .service-card:hover .sc-icon svg rect,
+  .service-card:hover .sc-icon svg line,
+  .service-card:hover .sc-icon svg polyline { stroke: var(--gold-light); }
+  .service-card:hover .sc-title { color: var(--white); }
+  .service-card:hover .sc-text { color: rgba(255,255,255,0.6); }
+  .service-card:hover .sc-tag { color: rgba(255,255,255,0.45); border-color: rgba(255,255,255,0.15); }
+  .sc-icon { margin-bottom: 1.6rem; }
+  .sc-icon svg { width: 32px; height: 32px; }
+  .sc-icon svg path, .sc-icon svg circle, .sc-icon svg rect, .sc-icon svg line, .sc-icon svg polyline {
+    stroke: var(--gold); stroke-width: 1.2; fill: none; transition: stroke 0.4s;
+  }
+  .sc-title {
+    font-family: var(--serif); font-size: 1.5rem; font-weight: 400;
+    color: var(--navy); margin-bottom: 0.8rem; transition: color 0.4s;
+  }
+  .sc-text {
+    font-size: 0.8rem; font-weight: 300; color: var(--text-light);
+    line-height: 1.8; margin-bottom: 1.2rem; transition: color 0.4s;
+  }
+  .sc-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .sc-tag {
+    font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
+    border: 1px solid rgba(0,0,0,0.12); color: var(--text-light);
+    padding: 0.25rem 0.7rem; transition: all 0.4s;
+  }
+
+  /* ── IV MENU ── */
+  #menu { background: var(--ivory); }
+  .menu-header { text-align: center; max-width: 640px; margin: 0 auto 4.5rem; }
+  .menu-collection { margin-bottom: 5rem; }
+  .collection-label {
+    font-family: var(--sans); font-size: 0.6rem; letter-spacing: 0.4em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem;
+  }
+  .collection-title {
+    font-family: var(--serif); font-size: 2rem; font-weight: 300; color: var(--navy);
+    padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);
+    margin-bottom: 2rem; letter-spacing: 0.04em;
+  }
+  .drip-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5px;
+  }
+  .drip-card {
+    background: var(--white); padding: 2rem 1.8rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .drip-card:hover { border-bottom-color: var(--gold); background: #fefcf8; }
+  .drip-icon {
+    font-size: 1.4rem; margin-bottom: 0.8rem; display: block;
+  }
+  .drip-name {
+    font-family: var(--serif); font-size: 1.3rem; font-weight: 400;
+    color: var(--navy); margin-bottom: 0.4rem; letter-spacing: 0.03em;
+  }
+  .drip-sub {
+    font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.8rem; font-weight: 400;
+  }
+  .drip-desc {
+    font-size: 0.8rem; color: var(--text-light); line-height: 1.75; font-weight: 300;
+  }
+
+  /* ── SHOTS ── */
+  #shots {
+    background: var(--navy);
+    position: relative; overflow: hidden;
+  }
+  #shots::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=70&fit=crop');
+    background-size: cover; background-position: center;
+    opacity: 0.08;
+  }
+  .shots-inner { position: relative; max-width: 1200px; margin: 0 auto; }
+  .shots-header { text-align: center; margin-bottom: 4rem; }
+  .shots-tagline {
+    font-family: var(--sans); font-size: 0.8rem; font-weight: 300;
+    color: rgba(255,255,255,0.6); letter-spacing: 0.15em; margin-top: 1rem;
+  }
+  .shots-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5px;
+  }
+  .shot-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,168,76,0.12);
+    padding: 2rem 1.8rem;
+    transition: background 0.3s, border-color 0.3s;
+    display: flex; align-items: flex-start; gap: 1.2rem;
+  }
+  .shot-card:hover {
+    background: rgba(201,168,76,0.08);
+    border-color: rgba(201,168,76,0.4);
+  }
+  .shot-icon {
+    width: 44px; height: 44px; flex-shrink: 0;
+    border: 1px solid rgba(201,168,76,0.35);
+    display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+  }
+  .shot-body {}
+  .shot-name {
+    font-family: var(--sans); font-size: 0.68rem; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--gold-light); font-weight: 500; margin-bottom: 0.4rem;
+  }
+  .shot-desc {
+    font-size: 0.78rem; color: rgba(255,255,255,0.55); line-height: 1.7; font-weight: 300;
+  }
+  .shots-note {
+    text-align: center; margin-top: 3rem;
+    font-size: 0.72rem; color: rgba(255,255,255,0.4); letter-spacing: 0.15em;
+    font-style: italic; font-family: var(--serif);
+  }
+
+  /* ── NADH ── */
+  #nadh {
+    background: var(--beige);
+    position: relative;
+  }
+  .nadh-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem;
+    align-items: center; max-width: 1200px; margin: 0 auto;
+  }
+  .nadh-visual {
+    position: relative; aspect-ratio: 3/4; overflow: hidden;
+  }
+  .nadh-visual img { width: 100%; height: 100%; object-fit: cover; }
+  .nadh-badge {
+    position: absolute; bottom: 2rem; left: 2rem;
+    background: var(--navy); padding: 1.2rem 1.6rem;
+    border-left: 3px solid var(--gold);
+  }
+  .nadh-badge strong {
+    display: block; font-family: var(--serif); font-size: 1.8rem;
+    color: var(--gold-light); font-weight: 300; letter-spacing: 0.04em;
+  }
+  .nadh-badge span {
+    font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: rgba(255,255,255,0.5); font-weight: 300;
+  }
+  .nadh-list { margin-top: 2rem; list-style: none; }
+  .nadh-list li {
+    padding: 0.9rem 0; border-bottom: 1px solid rgba(0,0,0,0.07);
+    font-size: 0.85rem; font-weight: 300; color: var(--text-light);
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .nadh-list li::before {
+    content: ''; width: 5px; height: 5px;
+    background: var(--gold); border-radius: 50%; flex-shrink: 0;
+  }
+  .nadh-cta {
+    margin-top: 2.5rem;
+    display: inline-flex; align-items: center; gap: 0.8rem;
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); font-weight: 400; text-decoration: none;
+    border-bottom: 1px solid rgba(201,168,76,0.3); padding-bottom: 0.2rem;
+    transition: gap 0.3s;
+  }
+  .nadh-cta:hover { gap: 1.2rem; }
+
+  /* ── WHY OASE ── */
+  #why {
+    background: var(--white);
+    background-image: url('https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1920&q=70&fit=crop');
+    background-blend-mode: overlay; background-size: cover; background-attachment: fixed;
+  }
+  .why-header { text-align: center; max-width: 640px; margin: 0 auto 4.5rem; }
+  .why-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 2px; max-width: 1200px; margin: 0 auto;
+  }
+  .why-card {
+    background: rgba(250,247,242,0.94); padding: 2.6rem 2rem;
+    border-top: 2px solid transparent; transition: border-color 0.3s;
+  }
+  .why-card:hover { border-top-color: var(--gold); }
+  .why-card-num {
+    font-family: var(--serif); font-size: 3rem; font-weight: 300;
+    color: rgba(201,168,76,0.2); line-height: 1; margin-bottom: 1rem;
+  }
+  .why-card h4 {
+    font-family: var(--serif); font-size: 1.15rem; font-weight: 400;
+    color: var(--navy); margin-bottom: 0.5rem;
+  }
+  .why-card p { font-size: 0.78rem; color: var(--text-light); line-height: 1.7; font-weight: 300; }
+
+  /* ── LONGEVITY ── */
+  #longevity {
+    background: var(--navy);
+    background-image: url('https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=1920&q=80&fit=crop');
+    background-blend-mode: multiply; background-size: cover; background-position: center top;
+  }
+  .longevity-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+  .longevity-quote {
+    font-family: var(--serif); font-size: clamp(1.8rem,3.5vw,3.2rem);
+    font-weight: 300; color: var(--white); line-height: 1.3;
+    letter-spacing: 0.02em; margin-bottom: 2.5rem;
+  }
+  .longevity-quote em { font-style: italic; color: var(--gold-light); }
+  .longevity-grid {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 4rem;
+  }
+  .lon-item {
+    border-top: 1px solid rgba(201,168,76,0.3); padding-top: 1.5rem; text-align: left;
+  }
+  .lon-item h5 {
+    font-family: var(--serif); font-size: 1rem; font-weight: 400;
+    color: var(--gold-light); margin-bottom: 0.5rem;
+  }
+  .lon-item p { font-size: 0.78rem; color: rgba(255,255,255,0.55); line-height: 1.7; font-weight: 300; }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials { background: var(--beige); }
+  .test-header { text-align: center; max-width: 640px; margin: 0 auto 4rem; }
+  .test-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2px; max-width: 1300px; margin: 0 auto;
+  }
+  .test-card {
+    background: var(--white); padding: 2.8rem 2.4rem;
+  }
+  .test-stars { color: var(--gold); font-size: 0.8rem; margin-bottom: 1.2rem; letter-spacing: 0.1em; }
+  .test-quote {
+    font-family: var(--serif); font-size: 1.08rem; font-weight: 300;
+    color: var(--navy); line-height: 1.65; margin-bottom: 1.8rem;
+    font-style: italic;
+  }
+  .test-author {
+    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--text-light); font-weight: 400;
+  }
+  .test-author strong { color: var(--navy); display: block; margin-bottom: 0.2rem; font-weight: 500; }
+
+  /* ── FAQ ── */
+  #faq { background: var(--ivory); }
+  .faq-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    max-width: 1100px; margin: 4rem auto 0;
+  }
+  .faq-item {
+    padding: 1.8rem 2.2rem; border-bottom: 1px solid rgba(0,0,0,0.07);
+    cursor: pointer;
+  }
+  .faq-item:nth-child(odd) { border-right: 1px solid rgba(0,0,0,0.07); }
+  .faq-q {
+    font-family: var(--serif); font-size: 1.08rem; font-weight: 400;
+    color: var(--navy); margin-bottom: 0.8rem;
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;
+  }
+  .faq-toggle { color: var(--gold); font-size: 1.2rem; flex-shrink: 0; transition: transform 0.3s; }
+  .faq-a {
+    font-size: 0.82rem; color: var(--text-light); line-height: 1.8; font-weight: 300;
+    max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
+  }
+  .faq-item.open .faq-a { max-height: 400px; }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); }
+  .faq-header { text-align: center; max-width: 640px; margin: 0 auto; }
+
+  /* ── HOURS SECTION ── */
+  #hours {
+    background: var(--navy); padding: 5rem 5vw;
+  }
+  .hours-inner {
+    max-width: 800px; margin: 0 auto; text-align: center;
+  }
+  .hours-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem;
+  }
+  .hours-block {
+    border: 1px solid rgba(201,168,76,0.2); padding: 2rem;
+  }
+  .hours-block h4 {
+    font-family: var(--sans); font-size: 0.6rem; letter-spacing: 0.35em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;
+  }
+  .hours-block p {
+    font-family: var(--serif); font-size: 1.5rem; font-weight: 300; color: var(--white);
+    letter-spacing: 0.04em;
+  }
+  .hours-block span {
+    font-size: 0.72rem; color: rgba(255,255,255,0.45); font-weight: 300; letter-spacing: 0.1em;
+  }
+
+  /* ── MAP & BOOKING ── */
+  #booking {
+    background: var(--ivory);
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 0; min-height: 600px;
+  }
+  .booking-content {
+    padding: 7rem 5vw; display: flex; flex-direction: column; justify-content: center;
+  }
+  .booking-content .section-h2 { max-width: 440px; }
+  .booking-content .section-p { margin-bottom: 2.5rem; }
+  .booking-btns { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
+  .btn-dark {
+    background: var(--navy); color: var(--white);
+    border: none; padding: 0.95rem 2.4rem;
+    font-family: var(--sans); font-size: 0.7rem; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    cursor: pointer; text-decoration: none; transition: background 0.3s;
+    display: inline-block;
+  }
+  .btn-dark:hover { background: var(--navy-mid); }
+  .btn-wa {
+    background: #25D366; color: var(--white);
+    border: none; padding: 0.95rem 2.4rem;
+    font-family: var(--sans); font-size: 0.7rem; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    cursor: pointer; text-decoration: none; transition: background 0.3s;
+    display: inline-flex; align-items: center; gap: 0.6rem;
+  }
+  .btn-wa:hover { background: #1fba5a; }
+  .map-wrap {
+    position: relative;
+  }
+  .map-wrap iframe {
+    width: 100%; height: 100%; min-height: 500px; border: none; display: block; filter: grayscale(20%) contrast(105%);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy); padding: 5rem 5vw 3rem;
+    border-top: 1px solid rgba(201,168,76,0.15);
+  }
+  .footer-top {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
+    margin-bottom: 4rem; padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-logo {
+    font-family: var(--serif); font-size: 2rem; font-weight: 300;
+    letter-spacing: 0.18em; color: var(--white); display: block; margin-bottom: 1.2rem;
+    text-decoration: none;
+  }
+  .footer-logo-sub {
+    font-size: 0.55rem; letter-spacing: 0.38em; text-transform: uppercase;
+    color: var(--gold); font-family: var(--sans); font-weight: 300; margin-bottom: 1.5rem;
+  }
+  .footer-about {
+    font-size: 0.78rem; color: rgba(255,255,255,0.45); line-height: 1.8; font-weight: 300; max-width: 280px;
+  }
+  .footer-col h5 {
+    font-family: var(--sans); font-size: 0.58rem; letter-spacing: 0.38em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; font-weight: 400;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 0.6rem; }
+  .footer-col ul li a {
+    font-size: 0.8rem; color: rgba(255,255,255,0.5); text-decoration: none;
+    font-weight: 300; letter-spacing: 0.05em; transition: color 0.3s;
+  }
+  .footer-col ul li a:hover { color: var(--gold-light); }
+  .footer-col address {
+    font-style: normal; font-size: 0.8rem;
+    color: rgba(255,255,255,0.5); line-height: 1.9; font-weight: 300;
+  }
+  .footer-col address a {
+    color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;
+  }
+  .footer-col address a:hover { color: var(--gold-light); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-copy {
+    font-size: 0.65rem; color: rgba(255,255,255,0.25); letter-spacing: 0.1em;
+  }
+  .footer-legal a {
+    font-size: 0.65rem; color: rgba(255,255,255,0.3); text-decoration: none;
+    margin-left: 1.5rem; letter-spacing: 0.08em; transition: color 0.3s;
+  }
+  .footer-legal a:hover { color: var(--gold); }
+
+  /* ── WA FLOAT ── */
+  .wa-float {
+    position: fixed; bottom: 2rem; right: 2rem; z-index: 900;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #25D366; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    text-decoration: none; transition: transform 0.3s, box-shadow 0.3s;
+    animation: pulse-wa 2.5s infinite;
+  }
+  .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.6); }
+  @keyframes pulse-wa {
+    0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+    50%      { box-shadow: 0 4px 32px rgba(37,211,102,0.65); }
+  }
+  .wa-float svg { width: 28px; height: 28px; }
+
+  /* ── REVEAL ANIMATIONS ── */
+  .reveal {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .nav-links, .nav-cta-wrap { display: none; }
+    .hamburger { display: flex; }
+    .method-grid, .nadh-grid, .faq-grid { grid-template-columns: 1fr; gap: 3rem; }
+    #booking { grid-template-columns: 1fr; }
+    .map-wrap iframe { min-height: 320px; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .longevity-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .hours-grid { grid-template-columns: 1fr; }
+    .faq-item:nth-child(odd) { border-right: none; }
+  }
+  @media (max-width: 600px) {
+    section { padding: 5rem 1.5rem; }
+    .footer-top { grid-template-columns: 1fr; }
+    .hero-h1 { font-size: 2.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">OASE<span>Wellness Clinic</span></a>
+  <ul class="nav-links">
+    <li><a href="#method">The Method</a></li>
+    <li><a href="#services">Treatments</a></li>
+    <li><a href="#menu">IV Menu</a></li>
+    <li><a href="#shots">Shots</a></li>
+    <li><a href="#nadh">NADH+</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <div class="nav-cta-wrap">
+    <a href="https://wa.me/34644105891" class="nav-cta" target="_blank">Book Now</a>
+  </div>
+  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
+  <a href="#method" onclick="document.getElementById('mobileMenu').classList.remove('open')">The Method</a>
+  <a href="#services" onclick="document.getElementById('mobileMenu').classList.remove('open')">Treatments</a>
+  <a href="#menu" onclick="document.getElementById('mobileMenu').classList.remove('open')">IV Menu</a>
+  <a href="#shots" onclick="document.getElementById('mobileMenu').classList.remove('open')">Shots</a>
+  <a href="#nadh" onclick="document.getElementById('mobileMenu').classList.remove('open')">NADH+</a>
+  <a href="#faq" onclick="document.getElementById('mobileMenu').classList.remove('open')">FAQ</a>
+  <a href="https://wa.me/34644105891" target="_blank">Book Now</a>
+</div>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Alicante · Spain · Mediterranean</p>
+    <h1 class="hero-h1">Precision Wellness.<br><em>Elevated Longevity.</em></h1>
+    <p class="hero-sub">Personalized IV Therapy and Longevity Medicine in Alicante.<br>Scientifically designed. Medically supervised. Tailored exclusively to you.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/34644105891" class="btn-primary" target="_blank">Book Your Assessment</a>
+      <a href="https://wa.me/34644105891" class="btn-outline" target="_blank">WhatsApp Consultation</a>
+    </div>
+    <p class="hero-stars"><strong>★★★★★</strong><br>Trusted by clients seeking optimal health, vitality and performance.</p>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ── INTRO STRIP ── -->
+<div id="intro">
+  <div class="intro-stat">
+    <strong>100%</strong>
+    <span>Personalized Protocols</span>
+  </div>
+  <div class="intro-divider"></div>
+  <div class="intro-stat">
+    <strong>Pharma</strong>
+    <span>Grade Formulations</span>
+  </div>
+  <div class="intro-divider"></div>
+  <div class="intro-stat">
+    <strong>German</strong>
+    <span>Scientific Standards</span>
+  </div>
+  <div class="intro-divider"></div>
+  <div class="intro-stat">
+    <strong>Medical</strong>
+    <span>Supervision Always</span>
+  </div>
+</div>
+
+<!-- ── THE METHOD ── -->
+<section id="method">
+  <div class="method-grid">
+    <div class="method-visual reveal">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=85&fit=crop&crop=center" alt="Alicante Mediterranean coastline" loading="lazy">
+    </div>
+    <div class="method-steps reveal">
+      <span class="section-label">The OASE Method</span>
+      <h2 class="section-h2">Your Health.<br><em>Designed Around You.</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-p" style="margin-bottom:2.5rem">No client at OASE receives a generic IV drip. Every protocol is built from the ground up — anchored in your unique biochemistry and medical profile.</p>
+
+      <div class="method-step">
+        <div class="step-num">I</div>
+        <div class="step-body">
+          <h4>Medical Consultation</h4>
+          <p>A thorough review of your health history, current symptoms, lifestyle and wellness goals conducted by our physician.</p>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="step-num">II</div>
+        <div class="step-body">
+          <h4>Comprehensive Blood Testing</h4>
+          <p>Advanced laboratory analysis covering vitamins, minerals, hormones, inflammation markers and metabolic indicators.</p>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="step-num">III</div>
+        <div class="step-body">
+          <h4>Biomarker Analysis</h4>
+          <p>Results are interpreted through the lens of precision medicine — identifying deficiencies, imbalances and optimization opportunities.</p>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="step-num">IV</div>
+        <div class="step-body">
+          <h4>Physician Protocol Review</h4>
+          <p>Your prescribing physician designs the treatment plan and selects the pharmaceutical-grade compounds tailored to your results.</p>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="step-num">V</div>
+        <div class="step-body">
+          <h4>Personalized IV Formulation</h4>
+          <p>Your bespoke infusion is prepared using German-standard pharmaceutical compounds — then administered in our premium clinical environment.</p>
+        </div>
+      </div>
+      <div class="method-step" style="border-bottom:none">
+        <div class="step-num">VI</div>
+        <div class="step-body">
+          <h4>Ongoing Optimization</h4>
+          <p>Follow-up assessments and protocol adjustments ensure your wellness continues to evolve alongside your changing biology.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SCIENCE ── -->
+<section id="science">
+  <div class="science-inner reveal">
+    <span class="section-label">Scientific Foundation</span>
+    <h2 class="section-h2 light">German Precision.<br><em>Backed by Science.</em></h2>
+    <div class="gold-rule" style="margin:0 auto 1.5rem"></div>
+    <p class="section-p light" style="margin:0 auto">Our pharmaceutical-grade IV formulations are developed in accordance with German scientific standards and evidence-based medical protocols. Every treatment is prescribed following thorough medical assessment and comprehensive biomarker analysis — never guesswork, never generic.</p>
+    <div class="science-pills">
+      <div class="pill">Evidence-Based Medicine</div>
+      <div class="pill">Pharmaceutical-Grade Nutrients</div>
+      <div class="pill">Scientific Protocols</div>
+      <div class="pill">Medical Supervision</div>
+      <div class="pill">Precision Wellness</div>
+      <div class="pill">Personalized Medicine</div>
+      <div class="pill">Biomarker-Driven</div>
+      <div class="pill">German Standards</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section id="services">
+  <div class="services-header reveal">
+    <span class="section-label">Treatment Programmes</span>
+    <h2 class="section-h2">Precision Protocols<br><em>for Every Goal</em></h2>
+    <div class="gold-rule" style="margin:0 auto 1.5rem"></div>
+    <p class="section-p" style="margin:0 auto">Each programme begins with medical assessment and laboratory analysis. Your protocol is then designed specifically around your biochemistry — not a template.</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card reveal">
+      <div class="sc-icon">
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <div class="sc-title">Recovery Therapy</div>
+      <p class="sc-text">High-performance recovery for the athlete and the achiever. Replenish, repair and return to peak condition with precision-dosed intravenous nutrients.</p>
+      <div class="sc-tags">
+        <span class="sc-tag">Athletic Recovery</span>
+        <span class="sc-tag">Muscle Fatigue</span>
+        <span class="sc-tag">Performance</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="sc-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <div class="sc-title">Energy & Performance</div>
+      <p class="sc-text">For the professional who demands more. Sharpen cognitive focus, elevate energy reserves and sustain peak mental performance throughout your day.</p>
+      <div class="sc-tags">
+        <span class="sc-tag">Mental Focus</span>
+        <span class="sc-tag">Productivity</span>
+        <span class="sc-tag">Cognitive Support</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="sc-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 0v10m0 0l6-6"/></svg>
+      </div>
+      <div class="sc-title">Longevity Optimization</div>
+      <p class="sc-text">A forward-thinking approach to healthy ageing. Cellular wellness protocols designed to support vitality, slow biological ageing and optimize long-term health.</p>
+      <div class="sc-tags">
+        <span class="sc-tag">Healthy Ageing</span>
+        <span class="sc-tag">Cellular Wellness</span>
+        <span class="sc-tag">Preventive Health</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="sc-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+      </div>
+      <div class="sc-title">Women's Wellness</div>
+      <p class="sc-text">Protocols designed with the complexity of female biology in mind. Support hormonal transitions, restore energy and reclaim wellbeing through every stage.</p>
+      <div class="sc-tags">
+        <span class="sc-tag">Perimenopause</span>
+        <span class="sc-tag">Hormonal Wellbeing</span>
+        <span class="sc-tag">Energy Optimization</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="sc-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </div>
+      <div class="sc-title">Sleep & Stress Support</div>
+      <p class="sc-text">Restore nervous system balance and improve sleep architecture. Targeted micronutrient therapy to calm, recover and reset from within.</p>
+      <div class="sc-tags">
+        <span class="sc-tag">Sleep Quality</span>
+        <span class="sc-tag">Relaxation</span>
+        <span class="sc-tag">Nervous System</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="sc-icon">
+        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <div class="sc-title">Detox & Rebalance</div>
+      <p class="sc-text">A complete wellness reset. Deep hydration, nutritional replenishment and targeted detoxification support to help you start again from a place of balance.</p>
+      <div class="sc-tags">
+        <span class="sc-tag">Wellness Reset</span>
+        <span class="sc-tag">Nutritional Support</span>
+        <span class="sc-tag">Hydration</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── IV MENU ── -->
+<section id="menu">
+  <div class="menu-header reveal">
+    <span class="section-label">IV Drip Selection</span>
+    <h2 class="section-h2">The OASE<br><em>IV Collection</em></h2>
+    <div class="gold-rule" style="margin:0 auto 1.5rem"></div>
+    <p class="section-p" style="margin:0 auto">Curated in two tiers of intensity, each formulation is dispensed only following medical assessment. Select your focus — we design the precise compound profile.</p>
+  </div>
+
+  <div class="menu-collection reveal">
+    <p class="collection-label">Tier One</p>
+    <h3 class="collection-title">Essential Collection</h3>
+    <div class="drip-grid">
+
+      <div class="drip-card">
+        <span class="drip-icon">✦</span>
+        <div class="drip-name">Beauty</div>
+        <div class="drip-sub">Radiant Skin Support</div>
+        <p class="drip-desc">A luminosity protocol rich in antioxidants and skin-supporting co-factors. Promotes clarity, hydration and a radiant complexion from within.</p>
+      </div>
+
+      <div class="drip-card">
+        <span class="drip-icon">⚡</span>
+        <div class="drip-name">Energy</div>
+        <div class="drip-sub">Vitality & Focus Support</div>
+        <p class="drip-desc">Targeted B-vitamins and metabolic cofactors to combat fatigue, restore cellular energy production and sharpen mental clarity.</p>
+      </div>
+
+      <div class="drip-card">
+        <span class="drip-icon">◈</span>
+        <div class="drip-name">Defense</div>
+        <div class="drip-sub">Immune & Wellness Support</div>
+        <p class="drip-desc">A high-potency immune infusion combining key immunomodulatory nutrients to reinforce your body's natural defenses.</p>
+      </div>
+
+      <div class="drip-card">
+        <span class="drip-icon">◇</span>
+        <div class="drip-name">Recover</div>
+        <div class="drip-sub">Deep Hydration & Recovery</div>
+        <p class="drip-desc">Optimal cellular hydration restored alongside electrolytes and restorative compounds for rapid physical recuperation.</p>
+      </div>
+
+      <div class="drip-card">
+        <span class="drip-icon">○</span>
+        <div class="drip-name">Reset Detox</div>
+        <div class="drip-sub">Wellness Reset & Balance</div>
+        <p class="drip-desc">A cleansing infusion to support the body's detoxification pathways, eliminate oxidative load and recalibrate systemic balance.</p>
+      </div>
+
+      <div class="drip-card">
+        <span class="drip-icon">≋</span>
+        <div class="drip-name">Balance</div>
+        <div class="drip-sub">Hydration & Mineral Replenishment</div>
+        <p class="drip-desc">Precision electrolyte and mineral replenishment for those experiencing depletion, dehydration or general systemic imbalance.</p>
+      </div>
+
+      <div class="drip-card">
+        <span class="drip-icon">⬡</span>
+        <div class="drip-name">Titan</div>
+        <div class="drip-sub">Recovery & Performance Support</div>
+        <p class="drip-desc">Engineered for those who train hard and recover harder. A comprehensive performance-focused formula to rebuild and fortify.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="menu-collection reveal">
+    <p class="collection-label">Tier Two</p>
+    <h3 class="collection-title">Elite Collection</h3>
+    <div class="drip-grid">
+
+      <div class="drip-card">
+        <span class="drip-icon">◉</span>
+        <div class="drip-name">Radiance</div>
+        <div class="drip-sub">Advanced Beauty Infusion</div>
+        <p class="drip-desc">An elevated skin and connective tissue protocol featuring high-dose Glutathione alongside premium anti-ageing micronutrients for visible results.</p>
+      </div>
+
+      <div class="drip-card">
+        <span class="drip-icon">⬟</span>
+        <div class="drip-name">Shield</div>
+        <div class="drip-sub">Advanced Antioxidant Support</div>
+        <p class="drip-desc">A formidable antioxidant profile to neutralize free radicals, reduce oxidative stress and support long-term cellular integrity.</p>
+      </div>
+
+      <div class="drip-card">
+        <span class="drip-icon">✧</span>
+        <div class="drip-name">Boost</div>
+        <div class="drip-sub">Cognitive Performance Support</div>
+        <p class="drip-desc">Precision nootropic compounds delivered intravenously for enhanced focus, sustained cognition and mental endurance.</p>
+      </div>
+
+      <div class="drip-card">
+        <span class="drip-icon">◈</span>
+        <div class="drip-name">Clarity</div>
+        <div class="drip-sub">Energy & Vitality Optimization</div>
+        <p class="drip-desc">A refined energy protocol addressing deep mitochondrial function to restore sustained vitality — not the fleeting kind.</p>
+      </div>
+
+      <div class="drip-card">
+        <span class="drip-icon">△</span>
+        <div class="drip-name">Reset</div>
+        <div class="drip-sub">Advanced Recovery Infusion</div>
+        <p class="drip-desc">Elite-level tissue recovery with comprehensive amino acids, anti-inflammatory compounds and regenerative cofactors for accelerated recuperation.</p>
+      </div>
+
+      <div class="drip-card">
+        <span class="drip-icon">∞</span>
+        <div class="drip-name">Eternal</div>
+        <div class="drip-sub">Longevity Support Protocol</div>
+        <p class="drip-desc">Our most comprehensive anti-ageing infusion, designed to support telomere health, cellular regeneration and long-horizon biological vitality.</p>
+      </div>
+
+      <div class="drip-card">
+        <span class="drip-icon">〜</span>
+        <div class="drip-name">Ocean</div>
+        <div class="drip-sub">Elite Hydration Therapy</div>
+        <p class="drip-desc">Inspired by the mineral richness of the Mediterranean. A complete isotonic hydration protocol with trace elements for total cellular saturation.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SHOTS ── -->
+<section id="shots">
+  <div class="shots-inner">
+    <div class="shots-header reveal">
+      <span class="section-label">Intravenous Microshots</span>
+      <h2 class="section-h2 light">OASE Shots.<br><em>Boost Your Day.</em></h2>
+      <div class="gold-rule" style="margin:0 auto 1.5rem"></div>
+      <p class="shots-tagline">Targeted intravenous push shots — fast, focused, and precisely formulated.<br>A premium complement to any IV protocol or as a standalone express treatment.</p>
+    </div>
+    <div class="shots-grid">
+
+      <div class="shot-card reveal">
+        <div class="shot-icon">⚡</div>
+        <div class="shot-body">
+          <div class="shot-name">Express Push</div>
+          <p class="shot-desc">An instant energy boost formulated for rapid absorption. B-complex and metabolic activators delivered in minutes for immediate vitality.</p>
+        </div>
+      </div>
+
+      <div class="shot-card reveal">
+        <div class="shot-icon">◉</div>
+        <div class="shot-body">
+          <div class="shot-name">Neuro Relax Push</div>
+          <p class="shot-desc">A calming neuro-supportive shot rich in magnesium and anxiolytic micronutrients to ease mental tension and restore nervous system calm.</p>
+        </div>
+      </div>
+
+      <div class="shot-card reveal">
+        <div class="shot-icon">✦</div>
+        <div class="shot-body">
+          <div class="shot-name">Energy Push</div>
+          <p class="shot-desc">High-potency B12 combined with targeted metabolic cofactors to elevate cellular energy production and sharpen sustained mental focus.</p>
+        </div>
+      </div>
+
+      <div class="shot-card reveal">
+        <div class="shot-icon">◈</div>
+        <div class="shot-body">
+          <div class="shot-name">Immune Push</div>
+          <p class="shot-desc">A concentrated immune-boosting shot delivering high-dose Vitamin C and zinc to reinforce your defenses at speed.</p>
+        </div>
+      </div>
+
+      <div class="shot-card reveal">
+        <div class="shot-icon">◇</div>
+        <div class="shot-body">
+          <div class="shot-name">Beauty Push</div>
+          <p class="shot-desc">A Glutathione-forward micro-infusion supporting skin radiance, oxidative balance and connective tissue health from the inside out.</p>
+        </div>
+      </div>
+
+      <div class="shot-card reveal">
+        <div class="shot-icon">○</div>
+        <div class="shot-body">
+          <div class="shot-name">Migraine Relief</div>
+          <p class="shot-desc">A targeted neuro-supportive formula with magnesium sulphate and B2 designed to rapidly address vascular tension and migraine onset.</p>
+        </div>
+      </div>
+
+      <div class="shot-card reveal">
+        <div class="shot-icon">⬡</div>
+        <div class="shot-body">
+          <div class="shot-name">Sport Push</div>
+          <p class="shot-desc">An express recovery shot formulated for athletes — amino acids and anti-inflammatory compounds to reduce muscle fatigue and accelerate tissue repair post-training.</p>
+        </div>
+      </div>
+
+    </div>
+    <p class="shots-note">All shots are administered intravenously by medical staff following assessment. Ask us about combining shots with your IV protocol.</p>
+  </div>
+</section>
+
+<!-- ── NADH+ ── -->
+<section id="nadh">
+  <div class="nadh-grid">
+    <div class="nadh-visual reveal">
+      <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=900&q=85&fit=crop&crop=center" alt="Alicante coastline at golden hour" loading="lazy">
+      <div class="nadh-badge">
+        <strong>NADH+</strong>
+        <span>Now Available at OASE</span>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="section-label">Exclusive Offering</span>
+      <h2 class="section-h2">NADH+<br><em>The Coenzyme of Longevity.</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-p">NADH (Nicotinamide Adenine Dinucleotide) is one of the most researched molecules in longevity medicine. As a critical coenzyme in cellular energy metabolism, NADH plays a fundamental role in mitochondrial function, DNA repair and cognitive performance — all of which naturally decline with age.</p>
+
+      <ul class="nadh-list">
+        <li>Supports mitochondrial energy production at a cellular level</li>
+        <li>Promotes neurological function and cognitive clarity</li>
+        <li>Associated with cellular regeneration and anti-ageing pathways</li>
+        <li>May support dopamine and serotonin synthesis in the brain</li>
+        <li>Used in leading longevity and preventive medicine clinics worldwide</li>
+        <li>Administered intravenously for superior bioavailability</li>
+      </ul>
+
+      <p style="font-size:0.82rem;color:var(--text-light);line-height:1.8;margin-top:1.5rem;font-weight:300;font-style:italic">
+        NADH+ infusion protocols are available exclusively at OASE Wellness Clinic. As this is a specialized treatment, we invite you to enquire directly for personalized information and clinical suitability assessment.
+      </p>
+
+      <a href="https://wa.me/34644105891?text=I'm%20interested%20in%20NADH%2B%20therapy%20at%20OASE" class="nadh-cta" target="_blank">
+        Enquire About NADH+ →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY OASE ── -->
+<section id="why">
+  <div class="why-header reveal">
+    <span class="section-label">Why Choose OASE</span>
+    <h2 class="section-h2">The Standard<br><em>of Excellence</em></h2>
+    <div class="gold-rule" style="margin:0 auto"></div>
+  </div>
+  <div class="why-grid">
+
+    <div class="why-card reveal">
+      <div class="why-card-num">01</div>
+      <h4>Personalized Protocols</h4>
+      <p>No template solutions. Every infusion is prescribed based on your unique biomarker data and medical consultation.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <div class="why-card-num">02</div>
+      <h4>Medical Assessment First</h4>
+      <p>All treatments begin with a physician consultation. Your health and safety are non-negotiable prerequisites.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <div class="why-card-num">03</div>
+      <h4>Blood Analysis Driven</h4>
+      <p>Comprehensive laboratory testing transforms your protocol from assumption to precision — designed around what your body actually needs.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <div class="why-card-num">04</div>
+      <h4>German Formulations</h4>
+      <p>Pharmaceutical-grade compounds manufactured to German scientific standards — the highest benchmark in intravenous medicine.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <div class="why-card-num">05</div>
+      <h4>Premium Clinical Experience</h4>
+      <p>A refined environment designed to feel nothing like a hospital. Calm, elegant and completely focused on your wellbeing.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <div class="why-card-num">06</div>
+      <h4>Mediterranean Setting</h4>
+      <p>Located in the heart of Alicante — where science and the restorative power of the Mediterranean come together.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <div class="why-card-num">07</div>
+      <h4>Luxury Patient Care</h4>
+      <p>Attentive, unhurried and deeply personalized. Every detail of your visit is designed to exceed expectation.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <div class="why-card-num">08</div>
+      <h4>Long-Term Optimization</h4>
+      <p>OASE is not a one-time visit. We build lasting wellness partnerships with clients committed to sustained, measurable improvement.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── LONGEVITY ── -->
+<section id="longevity">
+  <div class="longevity-inner reveal">
+    <span class="section-label">Our Philosophy</span>
+    <div class="longevity-quote">
+      "Longevity is not about<br>living longer.<br><em>It's about living better.</em>"
+    </div>
+    <div class="gold-rule" style="margin:0 auto 2rem"></div>
+    <p class="section-p light" style="margin:0 auto;text-align:center">The most meaningful advance in modern medicine is not treating disease — it is preventing it. At OASE, we work at the intersection of science and lifestyle to help you maintain the energy, clarity and physical capacity that make life worth living at every age.</p>
+    <div class="longevity-grid">
+      <div class="lon-item">
+        <h5>Cellular Health</h5>
+        <p>Mitochondrial function, oxidative balance and cellular integrity are the foundation of biological youth. We address them directly.</p>
+      </div>
+      <div class="lon-item">
+        <h5>Prevention First</h5>
+        <p>The most effective health investment you can make is before symptoms appear. We measure, analyze and act early.</p>
+      </div>
+      <div class="lon-item">
+        <h5>Sustainable Energy</h5>
+        <p>True energy is biochemical, not caffeine-dependent. Our protocols restore the metabolic substrates that power genuine vitality.</p>
+      </div>
+      <div class="lon-item">
+        <h5>Recovery Science</h5>
+        <p>Physical and cognitive resilience depend on quality recovery. We optimize the systems that restore you overnight and between sessions.</p>
+      </div>
+      <div class="lon-item">
+        <h5>Peak Performance</h5>
+        <p>Whether your arena is the boardroom or the athletic track — precision wellness unlocks the performance reserves that conventional medicine overlooks.</p>
+      </div>
+      <div class="lon-item">
+        <h5>Healthy Ageing</h5>
+        <p>Biological age and chronological age are not the same. With the right protocols, the gap between them is entirely within your control.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section id="testimonials">
+  <div class="test-header reveal">
+    <span class="section-label">Client Experiences</span>
+    <h2 class="section-h2">What Our<br><em>Clients Say</em></h2>
+    <div class="gold-rule" style="margin:0 auto"></div>
+  </div>
+  <div class="test-grid">
+
+    <div class="test-card reveal">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">"I've visited longevity clinics in Zurich and London. OASE in Alicante delivers the same level of precision and care — with a setting that is simply incomparable. The blood analysis approach gives you complete confidence that what you're receiving is actually designed for you."</p>
+      <div class="test-author">
+        <strong>Alexander R.</strong>
+        Tech Entrepreneur · London
+      </div>
+    </div>
+
+    <div class="test-card reveal">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">"As a professional cyclist, recovery is everything. I tried the Titan IV protocol after a stage race and the difference in how quickly I returned to training was remarkable. The team is medically rigorous and the clinic itself feels nothing like a medical facility — which is exactly what you want."</p>
+      <div class="test-author">
+        <strong>Marcos V.</strong>
+        Professional Cyclist · Valencia
+      </div>
+    </div>
+
+    <div class="test-card reveal">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">"Going through perimenopause, I felt like I was fighting my own body. OASE designed a women's protocol based on my actual bloodwork — not a guess. Within three weeks, my energy, sleep and mental clarity had changed dramatically. I only wish I had found them sooner."</p>
+      <div class="test-author">
+        <strong>Catherine M.</strong>
+        Architect · Paris
+      </div>
+    </div>
+
+    <div class="test-card reveal">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">"I travel to Alicante specifically for OASE. The NADH+ protocol combined with the Eternal drip is part of my quarterly longevity routine now. The medical team speaks the language of precision medicine fluently — and the results in my biometric tracking are undeniable."</p>
+      <div class="test-author">
+        <strong>Ingrid K.</strong>
+        Investment Director · Stockholm
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="faq">
+  <div class="faq-header reveal">
+    <span class="section-label">Frequently Asked</span>
+    <h2 class="section-h2">Your Questions,<br><em>Answered</em></h2>
+    <div class="gold-rule" style="margin:0 auto"></div>
+  </div>
+  <div class="faq-grid">
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">How does IV therapy work?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">Intravenous therapy delivers nutrients, vitamins and compounds directly into the bloodstream, bypassing the digestive system entirely. This results in near-complete bioavailability — meaning your cells receive the full therapeutic dose rather than the fraction absorbed through oral supplementation. Treatments are administered through a small IV cannula under full medical supervision.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Why do I need blood tests first?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">Every person has a unique biochemical profile. Blood testing allows us to identify precise deficiencies, imbalances and optimization opportunities — ensuring your protocol is evidence-based and clinically appropriate. At OASE, we never administer a generic drip: your results determine your formulation.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Are treatments fully personalized?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">Completely. No two protocols at OASE are identical. Following your medical consultation and laboratory analysis, your prescribing physician designs a compound profile tailored exclusively to your biology, goals and current health status. Protocols are also adjusted over time as your biomarkers evolve.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">How long does a session take?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">Infusion sessions typically range from 45 minutes to 90 minutes depending on your protocol. Express push shots take approximately 10 to 20 minutes. Your initial consultation and blood analysis appointment is separate and will be scheduled in advance of your first treatment.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Can IV therapy support athletic recovery?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">Yes. Intravenous delivery of amino acids, electrolytes, anti-inflammatory compounds and metabolic cofactors can significantly accelerate physical recovery compared to oral routes. Our Recovery and Titan protocols are specifically designed for athletic and high-performance contexts, always preceded by medical assessment.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Can protocols support menopause and hormonal wellness?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">Our Women's Wellness programme is designed specifically for the complex physiological changes of perimenopause and menopause. Through targeted micronutrient therapy based on laboratory findings, we support energy metabolism, cognitive function and hormonal balance — addressing the root biochemical causes of common symptoms.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">What is NADH+ and is it available at OASE?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">NADH (Nicotinamide Adenine Dinucleotide) is a critical coenzyme involved in cellular energy production, mitochondrial function and DNA repair — all central to healthy ageing. NADH+ infusion therapy is available exclusively at OASE and is administered following individual medical assessment. Please contact us directly to enquire about suitability and protocol options.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Who supervises my treatment?<span class="faq-toggle">+</span></div>
+      <div class="faq-a">All protocols at OASE are prescribed by a licensed physician following medical consultation and biomarker analysis. IV administration is carried out by qualified clinical staff. Medical supervision is present throughout your session — your safety and comfort are our absolute priorities.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── HOURS ── -->
+<section id="hours">
+  <div class="hours-inner reveal">
+    <span class="section-label">Opening Hours</span>
+    <h2 class="section-h2 light">We Are Open<br><em>Monday to Friday</em></h2>
+    <div class="gold-rule" style="margin:0 auto 2rem"></div>
+    <div class="hours-grid">
+      <div class="hours-block">
+        <h4>Clinic Hours</h4>
+        <p>10:00 — 20:00</p>
+        <span>Monday through Friday</span>
+      </div>
+      <div class="hours-block">
+        <h4>By Appointment</h4>
+        <p>Weekends</p>
+        <span>Contact us to enquire</span>
+      </div>
+    </div>
+    <p style="margin-top:2rem;font-size:0.75rem;color:rgba(255,255,255,0.35);letter-spacing:0.12em;font-weight:300">
+      Appointments are recommended. Walk-ins subject to availability.
+    </p>
+  </div>
+</section>
+
+<!-- ── BOOKING + MAP ── -->
+<div id="booking">
+  <div class="booking-content reveal">
+    <span class="section-label">Begin Your Journey</span>
+    <h2 class="section-h2">Start Your Personal<br><em>Wellness Journey.</em></h2>
+    <div class="gold-rule"></div>
+    <p class="section-p">Book your medical assessment and discover a personalized protocol designed around your unique biology. Our team will guide you from first consultation to lasting results.</p>
+    <div class="booking-btns">
+      <a href="https://wa.me/34644105891?text=I'd%20like%20to%20book%20a%20medical%20assessment%20at%20OASE%20Wellness%20Clinic" class="btn-dark" target="_blank">Book Consultation</a>
+      <a href="https://wa.me/34644105891" class="btn-wa" target="_blank">
+        <svg viewBox="0 0 24 24" fill="white" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp +34 644 105 891
+      </a>
+    </div>
+  </div>
+  <div class="map-wrap">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3121.4!2d-0.4844!3d38.3452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6235e79fea2111%3A0x8b0c6b5c0e1c8b5b!2sCalle%20Poeta%20Quintana%2C%2052%2C%2003004%20Alicante!5e0!3m2!1sen!2ses!4v1700000000000!5m2!1sen!2ses"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      title="OASE Wellness Clinic location map">
+    </iframe>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <a href="#hero" class="footer-logo">OASE</a>
+      <div class="footer-logo-sub">Wellness Clinic · Alicante</div>
+      <p class="footer-about">Precision IV Therapy and Longevity Medicine on the Mediterranean coast. Medically supervised. Scientifically formulated. Designed entirely around you.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navigation</h5>
+      <ul>
+        <li><a href="#method">The Method</a></li>
+        <li><a href="#services">Treatments</a></li>
+        <li><a href="#menu">IV Menu</a></li>
+        <li><a href="#shots">OASE Shots</a></li>
+        <li><a href="#nadh">NADH+</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <address>
+        C. Poeta Quintana 52<br>
+        03004 Alicante, Spain<br><br>
+        <a href="tel:+34644105891">+34 644 105 891</a><br>
+        <a href="mailto:info@oase-spain.com">info@oase-spain.com</a><br><br>
+        <a href="https://instagram.com/oase-spain" target="_blank">@oase-spain</a>
+      </address>
+    </div>
+    <div class="footer-col">
+      <h5>Hours</h5>
+      <address>
+        Monday – Friday<br>
+        10:00 – 20:00<br><br>
+        <a href="https://wa.me/34644105891" target="_blank">Book via WhatsApp</a>
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 OASE Wellness Clinic. All rights reserved.</span>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Medical Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ── WHATSAPP FLOAT ── -->
+<a href="https://wa.me/34644105891?text=Hello%2C%20I'd%20like%20to%20know%20more%20about%20OASE%20Wellness%20Clinic" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  // ── Sticky nav
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ── Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // ── FAQ
+  function toggleFaq(el) {
+    const isOpen = el.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(item => item.classList.remove('open'));
+    if (!isOpen) el.classList.add('open');
+  }
+
+  // ── Hero image fallback (use a reliable Unsplash coastal image)
+  const heroBg = document.querySelector('.hero-bg');
+  const img = new Image();
+  img.src = 'https://images.unsplash.com/photo-1555631683-7b2a4967f7b4?w=1920&q=85';
+  img.onerror = () => {
+    heroBg.style.backgroundImage = "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85')";
+  };
+</script>
+</body>
+</html>
