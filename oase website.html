@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>OASE by Goldstücker — IV Drip Therapy & Longevity Clinic Alicante</title>
+<meta name="description" content="Premium IV drip therapy and longevity clinic in Alicante. Personalised serum treatments backed by medical assessment. Beauty, energy, immunity, recovery and more."/>
+<meta property="og:title" content="OASE by Goldstücker — IV Drip Therapy Alicante"/>
+<meta property="og:description" content="Personalised IV therapy and longevity treatments in the heart of Alicante. Feel well. Look better. Live your best version."/>
+<meta property="og:type" content="website"/>
+<link rel="canonical" href="https://oasebygoldstucker.com"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "OASE by Goldstücker",
+  "description": "Specialised IV drip therapy and longevity clinic in Alicante, Spain",
+  "url": "https://oasebygoldstucker.com",
+  "telephone": "+34644105891",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "C. Poeta Quintana 52",
+    "postalCode": "03004",
+    "addressLocality": "Alicante",
+    "addressCountry": "ES"
+  },
+  "medicalSpecialty": "Wellness and Longevity",
+  "priceRange": "€€€"
+}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #243A52;
+    --navy-deep: #18293C;
+    --gold: #C9A84C;
+    --gold-light: #E2C97E;
+    --cream: #F7F4EF;
+    --cream-dark: #EDE8E0;
+    --text-dark: #1A2535;
+    --text-mid: #4A5568;
+    --white: #FFFFFF;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Jost', 'Helvetica Neue', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    font-weight: 300;
+    color: var(--text-dark);
+    background: var(--cream);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(24,41,60,0.96);
+    backdrop-filter: blur(12px);
+    padding: 0 48px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .nav-logo span {
+    font-size: 10px;
+    font-family: var(--font-body);
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: rgba(201,168,76,0.7);
+    display: block;
+    margin-top: -4px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold) !important;
+    padding: 8px 20px;
+    letter-spacing: 0.2em !important;
+    transition: all 0.3s !important;
+  }
+
+  .nav-cta:hover {
+    background: var(--gold) !important;
+    color: var(--navy-deep) !important;
+  }
+
+  /* ── HERO ── */
+  #home {
+    position: relative;
+    height: 100vh;
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom, rgba(24,41,60,0.55) 0%, rgba(24,41,60,0.3) 50%, rgba(24,41,60,0.7) 100%),
+      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1800&q=85&fit=crop') center/cover no-repeat;
+  }
+
+  .hero-content {
+    position: relative;
+    text-align: center;
+    color: var(--white);
+    padding: 0 24px;
+    max-width: 820px;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.6;
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(52px, 8vw, 96px);
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    margin-bottom: 8px;
+    color: var(--white);
+  }
+
+  .hero-subtitle {
+    font-family: var(--font-display);
+    font-size: clamp(16px, 2.5vw, 24px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gold-light);
+    letter-spacing: 0.05em;
+    margin-bottom: 32px;
+  }
+
+  .hero-tagline {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.75);
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy-deep);
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.5);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.5);
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.1); }
+  }
+
+  /* ── SECTION COMMON ── */
+  section { padding: 100px 0; }
+
+  .section-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .section-eyebrow {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .section-eyebrow::after {
+    content: '';
+    flex: 1;
+    max-width: 60px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    margin-bottom: 24px;
+  }
+
+  .section-body {
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--text-mid);
+    max-width: 640px;
+  }
+
+  .gold-divider {
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
+    margin: 32px 0;
+    opacity: 0.6;
+  }
+
+  /* ── BENEFITS STRIP ── */
+  .benefits-strip {
+    background: var(--navy-deep);
+    padding: 56px 0;
+  }
+
+  .benefits-grid {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  .benefit-item {
+    text-align: center;
+    color: var(--white);
+  }
+
+  .benefit-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
+    border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .benefit-icon svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+
+  .benefit-title {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .benefit-text {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.03em;
+  }
+
+  /* ── ABOUT ── */
+  #about { background: var(--cream); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-image-wrap {
+    position: relative;
+  }
+
+  .about-img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    display: block;
+  }
+
+  .about-image-accent {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 60%;
+    aspect-ratio: 1;
+    border: 1px solid var(--gold);
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .stat-item {
+    padding: 24px;
+    background: var(--navy-deep);
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: 42px;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* ── MEDICAL ASSESSMENT ── */
+  #medical {
+    background: var(--navy-deep);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #medical::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 40%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&q=80&fit=crop') center/cover;
+    opacity: 0.12;
+  }
+
+  .medical-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 48px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .medical-inner .section-title { color: var(--white); }
+  .medical-inner .section-body { color: rgba(255,255,255,0.65); }
+  .medical-inner .section-eyebrow { color: var(--gold); }
+
+  .assessment-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+  }
+
+  .step-card {
+    border-top: 1px solid rgba(201,168,76,0.3);
+    padding-top: 32px;
+  }
+
+  .step-num {
+    font-family: var(--font-display);
+    font-size: 48px;
+    font-weight: 300;
+    color: rgba(201,168,76,0.25);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .step-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 12px;
+    letter-spacing: 0.03em;
+  }
+
+  .step-text {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* ── TREATMENTS ── */
+  #offering { background: var(--cream-dark); }
+
+  .treatments-header {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  .treatments-header .section-eyebrow {
+    justify-content: center;
+  }
+
+  .treatments-header .section-eyebrow::after { display: none; }
+
+  .treatments-header .section-eyebrow::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+
+  .treatments-header .section-title { text-align: center; }
+
+  .line-label {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--navy);
+    letter-spacing: 0.04em;
+    margin-bottom: 40px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(201,168,76,0.4);
+    width: 100%;
+  }
+
+  .treatments-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-bottom: 4px;
+  }
+
+  .treatments-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-bottom: 60px;
+  }
+
+  .treatment-card {
+    background: var(--white);
+    padding: 36px 28px;
+    transition: all 0.35s;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .treatment-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.35s;
+  }
+
+  .treatment-card:hover { background: var(--navy-deep); transform: translateY(-4px); }
+  .treatment-card:hover::after { transform: scaleX(1); }
+
+  .treatment-card:hover .treatment-name { color: var(--gold); }
+  .treatment-card:hover .treatment-sub { color: rgba(255,255,255,0.5); }
+  .treatment-card:hover .treatment-desc { color: rgba(255,255,255,0.65); }
+  .treatment-card:hover .treatment-price { color: var(--gold-light); }
+
+  .treatment-name {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--navy);
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+    transition: color 0.35s;
+  }
+
+  .treatment-sub {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    margin-bottom: 16px;
+    transition: color 0.35s;
+  }
+
+  .treatment-desc {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--text-mid);
+    margin-bottom: 24px;
+    transition: color 0.35s;
+  }
+
+  .treatment-price {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--navy);
+    transition: color 0.35s;
+  }
+
+  .treatment-price span {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  /* SHOTS SECTION */
+  .shots-section {
+    background: var(--navy);
+    padding: 60px 48px;
+    max-width: 100%;
+    margin-top: 60px;
+  }
+
+  .shots-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  .shots-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 48px;
+  }
+
+  .shots-title {
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--white);
+    letter-spacing: 0.04em;
+  }
+
+  .shots-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .shots-note {
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+  }
+
+  .shots-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+  }
+
+  .shot-card {
+    background: rgba(255,255,255,0.04);
+    border-top: 1px solid rgba(201,168,76,0.25);
+    padding: 28px 20px;
+    text-align: center;
+    transition: background 0.3s;
+  }
+
+  .shot-card:hover { background: rgba(201,168,76,0.08); }
+
+  .shot-name {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+
+  .shot-desc {
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 16px;
+  }
+
+  .shot-price {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--white);
+  }
+
+  /* ── BENEFITS SECTION ── */
+  #benefits { background: var(--cream); }
+
+  .benefits-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .benefits-image {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    display: block;
+  }
+
+  .benefits-list {
+    list-style: none;
+    margin-top: 40px;
+  }
+
+  .benefits-list li {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-mid);
+  }
+
+  .benefits-list li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+    margin-top: 8px;
+    flex-shrink: 0;
+  }
+
+  /* ── REVIEWS ── */
+  #reviews {
+    background: var(--navy-deep);
+    padding: 100px 0;
+  }
+
+  .reviews-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .reviews-header .section-title { color: var(--white); }
+  .reviews-header .section-eyebrow { color: var(--gold); justify-content: center; }
+  .reviews-header .section-eyebrow::after { display: none; }
+  .reviews-header .section-eyebrow::before { content: ''; width: 60px; height: 1px; background: var(--gold); opacity: 0.5; }
+
+  .reviews-grid {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .review-card {
+    background: rgba(255,255,255,0.04);
+    padding: 40px 36px;
+    border-top: 1px solid rgba(201,168,76,0.25);
+  }
+
+  .review-stars {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+  }
+
+  .review-text {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 28px;
+  }
+
+  .review-author {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .review-location {
+    font-size: 11px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.35);
+    margin-top: 4px;
+  }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--cream); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-info-block {
+    margin-bottom: 40px;
+  }
+
+  .contact-label {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .contact-value {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--navy);
+    letter-spacing: 0.03em;
+  }
+
+  .contact-value a {
+    color: var(--navy);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .contact-value a:hover { color: var(--gold); }
+
+  .contact-map {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: var(--cream-dark);
+    border: 0;
+    display: block;
+  }
+
+  .contact-hours {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(201,168,76,0.3);
+  }
+
+  .hours-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    color: var(--text-mid);
+  }
+
+  .hours-row .day { font-weight: 400; color: var(--text-dark); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0F1C29;
+    padding: 60px 0 32px;
+  }
+
+  .footer-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .footer-logo-sub {
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(201,168,76,0.5);
+    margin-bottom: 20px;
+  }
+
+  .footer-tagline {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .footer-col-title {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 12px; }
+  .footer-links a {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 28px;
+    font-size: 11px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── CASTLE SECTION ── */
+  .castle-interlude {
+    position: relative;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .castle-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to right, rgba(24,41,60,0.85) 0%, rgba(24,41,60,0.4) 60%, rgba(24,41,60,0.7) 100%),
+      url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80&fit=crop') center/cover;
+  }
+
+  .castle-content {
+    position: relative;
+    text-align: center;
+    color: var(--white);
+    padding: 0 24px;
+  }
+
+  .castle-quote {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    max-width: 740px;
+    margin: 0 auto 20px;
+  }
+
+  .castle-author {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-links { gap: 20px; }
+    .section-inner { padding: 0 24px; }
+    .about-grid, .benefits-content, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    .treatments-grid { grid-template-columns: repeat(2, 1fr); }
+    .treatments-grid-3 { grid-template-columns: repeat(2, 1fr); }
+    .shots-grid { grid-template-columns: repeat(3, 1fr); }
+    .assessment-steps { grid-template-columns: 1fr; }
+    .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; gap: 40px; }
+    .shots-section { padding: 60px 24px; }
+    .medical-inner { padding: 0 24px; }
+  }
+
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .treatments-grid { grid-template-columns: 1fr; }
+    .shots-grid { grid-template-columns: repeat(2, 1fr); }
+    .benefits-grid { grid-template-columns: 1fr; }
+    .hero-actions { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo">
+    OASE
+    <span>by Goldstücker</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#medical">Our Method</a></li>
+    <li><a href="#offering">Treatments</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">IV Drip Therapy · Alicante</p>
+    <h1 class="hero-title">OASE</h1>
+    <p class="hero-subtitle">by Goldstücker</p>
+    <p class="hero-tagline">Feel well · Look better · Live your best version</p>
+    <div class="hero-actions">
+      <a href="#offering" class="btn-primary">Explore Treatments</a>
+      <a href="#contact" class="btn-outline">Book a Session</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- BENEFITS STRIP -->
+<div class="benefits-strip">
+  <div class="benefits-grid">
+    <div class="benefit-item">
+      <div class="benefit-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+      </div>
+      <p class="benefit-title">100% Absorption</p>
+      <p class="benefit-text">Intravenous delivery ensures complete bioavailability — no digestive loss.</p>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <p class="benefit-title">Fast Results</p>
+      <p class="benefit-text">Feel the difference during the session and throughout the following days.</p>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <p class="benefit-title">Medical Supervision</p>
+      <p class="benefit-text">Every treatment is personalised and administered under clinical supervision.</p>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-icon">
+        <svg viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+      </div>
+      <p class="benefit-title">Personalised Care</p>
+      <p class="benefit-text">Tailored formulas based on your blood work and metabolic profile.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=85&fit=crop&crop=center"
+          alt="Mediterranean coast Alicante"
+          class="about-img"
+        />
+        <div class="about-image-accent"></div>
+      </div>
+      <div>
+        <p class="section-eyebrow">About Us</p>
+        <h2 class="section-title">Where science meets the Mediterranean</h2>
+        <div class="gold-divider"></div>
+        <p class="section-body">
+          OASE by Goldstücker is a premium wellness clinic located in the heart of Alicante, born from a belief that true health is not reactive — it is intentional. We specialise in intravenous serum therapy and longevity protocols designed to restore, protect, and elevate your body from within.
+        </p>
+        <br/>
+        <p class="section-body">
+          Our clinic brings together medical-grade formulations and a deeply personal approach to wellbeing. Every client begins with a comprehensive assessment, ensuring that what enters your body is exactly what your body needs.
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <p class="stat-number">13+</p>
+            <p class="stat-label">IV Treatments</p>
+          </div>
+          <div class="stat-item">
+            <p class="stat-number">100%</p>
+            <p class="stat-label">Medical Grade</p>
+          </div>
+          <div class="stat-item">
+            <p class="stat-number">7</p>
+            <p class="stat-label">Quick Shots</p>
+          </div>
+          <div class="stat-item">
+            <p class="stat-number">Alicante</p>
+            <p class="stat-label">Since 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDICAL ASSESSMENT -->
+<section id="medical">
+  <div class="medical-inner">
+    <p class="section-eyebrow">Our Method</p>
+    <h2 class="section-title" style="color:white;">Your treatment starts with understanding you</h2>
+    <div class="gold-divider"></div>
+    <p class="section-body">
+      Before any drip is administered, we conduct a full initial medical assessment. Through blood analysis and metabolic evaluation, we map your body's unique state — oxidative stress levels, vitamin deficiencies, hormonal balance, and cellular function. Only then do we design your personalised protocol.
+    </p>
+    <div class="assessment-steps">
+      <div class="step-card">
+        <p class="step-num">01</p>
+        <p class="step-title">Blood Analysis</p>
+        <p class="step-text">A full blood panel evaluates your nutritional status, inflammatory markers, and metabolic function, giving us a precise biological picture of where you are today.</p>
+      </div>
+      <div class="step-card">
+        <p class="step-num">02</p>
+        <p class="step-title">Metabolic & Oxidative Assessment</p>
+        <p class="step-text">We measure oxidative stress — one of the key drivers of ageing and fatigue — alongside energy metabolism to identify exactly what your body needs.</p>
+      </div>
+      <div class="step-card">
+        <p class="step-num">03</p>
+        <p class="step-title">Your Personalised Protocol</p>
+        <p class="step-text">Based on your results, our medical team designs a serum protocol tailored to your biology, goals, and lifestyle — not a generic formula, but yours specifically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASTLE INTERLUDE -->
+<div class="castle-interlude">
+  <div class="castle-bg"></div>
+  <div class="castle-content">
+    <p class="castle-quote">"Your body has the capacity to heal, energise, and radiate — it simply needs the right fuel."</p>
+    <p class="castle-author">OASE by Goldstücker · Alicante</p>
+  </div>
+</div>
+
+<!-- TREATMENTS -->
+<section id="offering">
+  <div class="section-inner">
+    <div class="treatments-header">
+      <p class="section-eyebrow">Our Offering</p>
+      <h2 class="section-title">IV Drip Menu</h2>
+      <p style="font-size:14px;font-weight:300;color:var(--text-mid);max-width:540px;margin:0 auto;line-height:1.8;">
+        Two lines of treatments — Esencial for foundational wellness, Elite for advanced protocols — each formulated to address your body's specific needs.
+      </p>
+    </div>
+
+    <p class="line-label">— Línea Esencial</p>
+    <div class="treatments-grid" style="margin-bottom:2px;">
+      <div class="treatment-card">
+        <p class="treatment-name">Beauty</p>
+        <p class="treatment-sub">Radiant Skin Infusion</p>
+        <p class="treatment-desc">Promotes cellular regeneration and luminosity. Delivers antioxidants and collagen precursors directly into the bloodstream.</p>
+        <p class="treatment-price">185<span>€</span></p>
+      </div>
+      <div class="treatment-card">
+        <p class="treatment-name">Energy</p>
+        <p class="treatment-sub">Vitality & Focus Drip</p>
+        <p class="treatment-desc">Restores mental clarity and physical energy. B-vitamins and amino acids to fuel both mind and body.</p>
+        <p class="treatment-price">185<span>€</span></p>
+      </div>
+      <div class="treatment-card">
+        <p class="treatment-name">Defense</p>
+        <p class="treatment-sub">Immune Support Therapy</p>
+        <p class="treatment-desc">High-dose vitamin C, zinc, and antioxidants for deep immune reinforcement and systemic protection.</p>
+        <p class="treatment-price">185<span>€</span></p>
+      </div>
+      <div class="treatment-card">
+        <p class="treatment-name">Recover</p>
+        <p class="treatment-sub">Deep Hydration Drip</p>
+        <p class="treatment-desc">Replenishes electrolytes and hydration at a cellular level. Ideal after exertion, travel, or illness.</p>
+        <p class="treatment-price">185<span>€</span></p>
+      </div>
+    </div>
+    <div class="treatments-grid-3" style="margin-bottom:60px;">
+      <div class="treatment-card">
+        <p class="treatment-name">Reset Detox</p>
+        <p class="treatment-sub">Calm & Wellbeing</p>
+        <p class="treatment-desc">Supports the body's natural detox pathways. Promotes calm, reduces tension, and restores inner balance.</p>
+        <p class="treatment-price">185<span>€</span></p>
+      </div>
+      <div class="treatment-card">
+        <p class="treatment-name">Balance</p>
+        <p class="treatment-sub">Hydration & Minerals</p>
+        <p class="treatment-desc">A precise mineral and electrolyte blend for total hydration, cellular function, and physiological equilibrium.</p>
+        <p class="treatment-price">185<span>€</span></p>
+      </div>
+      <div class="treatment-card">
+        <p class="treatment-name">Titan</p>
+        <p class="treatment-sub">Muscle Recovery</p>
+        <p class="treatment-desc">Accelerates muscular repair and recovery. Combines amino acids and anti-inflammatory compounds for peak regeneration.</p>
+        <p class="treatment-price">185<span>€</span></p>
+      </div>
+    </div>
+
+    <p class="line-label">— Línea Elite</p>
+    <div class="treatments-grid" style="margin-bottom:2px;">
+      <div class="treatment-card">
+        <p class="treatment-name">Radiance</p>
+        <p class="treatment-sub">Advanced Beauty Infusion</p>
+        <p class="treatment-desc">Advanced cellular regeneration and premium anti-ageing support. The ultimate skin and vitality treatment.</p>
+        <p class="treatment-price">320<span>€</span></p>
+      </div>
+      <div class="treatment-card">
+        <p class="treatment-name">Shield</p>
+        <p class="treatment-sub">Cellular Defense Therapy</p>
+        <p class="treatment-desc">Intensive antioxidant protection and advanced cellular defense. Guards against oxidative damage at a deep level.</p>
+        <p class="treatment-price">280<span>€</span></p>
+      </div>
+      <div class="treatment-card">
+        <p class="treatment-name">Boost</p>
+        <p class="treatment-sub">Cognitive Performance Drip</p>
+        <p class="treatment-desc">Optimises mental performance, clarity, and cognitive focus through targeted neuro-supportive nutrients.</p>
+        <p class="treatment-price">260<span>€</span></p>
+      </div>
+      <div class="treatment-card">
+        <p class="treatment-name">Clarity</p>
+        <p class="treatment-sub">Mitochondrial Therapy</p>
+        <p class="treatment-desc">Advanced cellular energy and premium physical recovery. Supports mitochondrial function for sustained vitality.</p>
+        <p class="treatment-price">380<span>€</span></p>
+      </div>
+    </div>
+    <div class="treatments-grid-3">
+      <div class="treatment-card">
+        <p class="treatment-name">Reset</p>
+        <p class="treatment-sub">Advanced Detox Infusion</p>
+        <p class="treatment-desc">Deep detox and intensive cellular regeneration. Clears metabolic waste and restores systemic function.</p>
+        <p class="treatment-price">290<span>€</span></p>
+      </div>
+      <div class="treatment-card">
+        <p class="treatment-name">Eternal</p>
+        <p class="treatment-sub">Longevity Recovery Therapy</p>
+        <p class="treatment-desc">Comprehensive recovery and advanced functional optimisation. Designed for longevity, resilience, and deep restoration.</p>
+        <p class="treatment-price">340<span>€</span></p>
+      </div>
+      <div class="treatment-card">
+        <p class="treatment-name">Ocean</p>
+        <p class="treatment-sub">Elite Hydration Therapy</p>
+        <p class="treatment-desc">Premium hydration with advanced mineral support. Restores fluid balance and electrolyte integrity at a superior level.</p>
+        <p class="treatment-price">220<span>€</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOTS -->
+  <div class="shots-section">
+    <div class="shots-inner">
+      <div class="shots-header">
+        <h3 class="shots-title">Quick Push <em>Shots</em></h3>
+        <p class="shots-note">Fast-acting · 85€ each</p>
+      </div>
+      <div class="shots-grid">
+        <div class="shot-card">
+          <p class="shot-name">Vitamin C</p>
+          <p class="shot-desc">Immune boost & antioxidant shield</p>
+          <p class="shot-price">85€</p>
+        </div>
+        <div class="shot-card">
+          <p class="shot-name">B12</p>
+          <p class="shot-desc">Energy, focus & nervous system support</p>
+          <p class="shot-price">85€</p>
+        </div>
+        <div class="shot-card">
+          <p class="shot-name">Glutathione</p>
+          <p class="shot-desc">Master antioxidant & skin luminosity</p>
+          <p class="shot-price">85€</p>
+        </div>
+        <div class="shot-card">
+          <p class="shot-name">Magnesium</p>
+          <p class="shot-desc">Muscle calm & stress relief</p>
+          <p class="shot-price">85€</p>
+        </div>
+        <div class="shot-card">
+          <p class="shot-name">NAD+</p>
+          <p class="shot-desc">Cellular energy & anti-ageing</p>
+          <p class="shot-price">85€</p>
+        </div>
+        <div class="shot-card">
+          <p class="shot-name">Zinc</p>
+          <p class="shot-desc">Immunity, skin & hormonal balance</p>
+          <p class="shot-price">85€</p>
+        </div>
+        <div class="shot-card">
+          <p class="shot-name">Biotin</p>
+          <p class="shot-desc">Hair, nails & metabolic support</p>
+          <p class="shot-price">85€</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section id="benefits">
+  <div class="section-inner">
+    <div class="benefits-content">
+      <div>
+        <p class="section-eyebrow">Why IV Therapy</p>
+        <h2 class="section-title">The science behind the serum</h2>
+        <div class="gold-divider"></div>
+        <p class="section-body">
+          Unlike oral supplements, intravenous therapy delivers nutrients directly into your bloodstream — achieving up to 100% absorption that the digestive system simply cannot match. The results are felt faster, more fully, and with a precision that oral administration cannot replicate.
+        </p>
+        <ul class="benefits-list">
+          <li>Immediate cellular hydration and nutrient delivery</li>
+          <li>Boosts energy levels and reduces chronic fatigue</li>
+          <li>Strengthens immune response and reduces inflammation</li>
+          <li>Supports skin radiance, collagen production and anti-ageing</li>
+          <li>Enhances athletic recovery and reduces muscle soreness</li>
+          <li>Improves mental clarity, focus and cognitive performance</li>
+          <li>Detoxifies the body and optimises metabolic function</li>
+          <li>Promotes longevity through mitochondrial support</li>
+        </ul>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=85&fit=crop&crop=center"
+        alt="Mediterranean ocean Alicante"
+        class="benefits-image"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="reviews-header section-inner" style="padding-bottom:0;">
+    <p class="section-eyebrow" style="justify-content:center;">Client Reviews</p>
+    <h2 class="section-title" style="color:white;text-align:center;">What our clients say</h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <p class="review-stars">★★★★★</p>
+      <p class="review-text">"I came in completely exhausted after a demanding work month. After the Energy drip I felt like a different person — alert, clear-headed and genuinely revitalised. I'll be back every month."</p>
+      <p class="review-author">Isabelle M.</p>
+      <p class="review-location">Alicante</p>
+    </div>
+    <div class="review-card">
+      <p class="review-stars">★★★★★</p>
+      <p class="review-text">"The initial blood assessment was what convinced me. They actually looked at my biology before recommending anything. The Beauty drip has genuinely transformed my skin over three sessions."</p>
+      <p class="review-author">Laura V.</p>
+      <p class="review-location">Valencia</p>
+    </div>
+    <div class="review-card">
+      <p class="review-stars">★★★★★</p>
+      <p class="review-text">"I was sceptical at first but the Recover drip after my marathon was extraordinary. Zero muscle soreness the next day. The team is professional, warm and the space feels genuinely luxurious."</p>
+      <p class="review-author">Carlos R.</p>
+      <p class="review-location">Alicante</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div>
+        <p class="section-eyebrow">Contact</p>
+        <h2 class="section-title">Book your session</h2>
+        <div class="gold-divider"></div>
+        <p class="section-body" style="margin-bottom:48px;">
+          Ready to begin? Reach us directly by phone or visit us at our clinic in the heart of Alicante. We recommend booking in advance to secure your preferred time.
+        </p>
+
+        <div class="contact-info-block">
+          <p class="contact-label">Phone</p>
+          <p class="contact-value"><a href="tel:+34644105891">+34 644 105 891</a></p>
+        </div>
+
+        <div class="contact-info-block">
+          <p class="contact-label">Address</p>
+          <p class="contact-value">C. Poeta Quintana 52<br/>03004 Alicante, Spain</p>
+        </div>
+
+        <div class="contact-info-block">
+          <p class="contact-label">Instagram</p>
+          <p class="contact-value"><a href="https://instagram.com/oasebygoldstucker" target="_blank">@oasebygoldstucker</a></p>
+        </div>
+
+        <div class="contact-hours">
+          <p class="contact-label" style="margin-bottom:16px;">Opening Hours</p>
+          <div class="hours-row"><span class="day">Monday – Friday</span><span>9:00 – 19:00</span></div>
+          <div class="hours-row"><span class="day">Saturday</span><span>10:00 – 15:00</span></div>
+          <div class="hours-row"><span class="day">Sunday</span><span>Closed</span></div>
+        </div>
+      </div>
+
+      <div>
+        <iframe
+          class="contact-map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU3Lis&q=C.+Poeta+Quintana+52,+Alicante,+Spain"
+          title="OASE by Goldstücker location"
+        ></iframe>
+        <div style="margin-top:32px;padding:32px;background:var(--navy-deep);">
+          <p style="font-family:var(--font-display);font-size:22px;font-weight:300;color:var(--gold);margin-bottom:12px;letter-spacing:0.04em;">Ready to feel the difference?</p>
+          <p style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:24px;">Call us or send a WhatsApp message to book your initial consultation and blood assessment.</p>
+          <a href="tel:+34644105891" class="btn-primary" style="display:inline-block;">Call +34 644 105 891</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">OASE</p>
+        <p class="footer-logo-sub">by Goldstücker</p>
+        <p class="footer-tagline">Premium IV drip therapy and longevity treatments in the heart of Alicante. Feel well. Look better. Live your best version.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#medical">Our Method</a></li>
+          <li><a href="#offering">Treatments</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <ul class="footer-links">
+          <li><a href="tel:+34644105891">+34 644 105 891</a></li>
+          <li><a href="#">C. Poeta Quintana 52</a></li>
+          <li><a href="#">03004 Alicante</a></li>
+          <li><a href="https://instagram.com/oasebygoldstucker">@oasebygoldstucker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 OASE by Goldstücker. All rights reserved.</p>
+      <p>Alicante, Spain · IV Drip Therapy & Longevity</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
