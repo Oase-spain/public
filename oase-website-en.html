@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OASE by Goldstücker — IV Drip Therapy & Longevity Clinic Alicante</title>
+<meta name="description" content="Alicante's premier IV drip therapy and longevity clinic. Personalised IV protocols with full medical assessment. Deep hydration, energy and wellness from within.">
+<meta name="keywords" content="IV drip Alicante, serum therapy Alicante, longevity clinic Alicante, intravenous vitamins, wellness Alicante, IV infusion Spain">
+<meta property="og:title" content="OASE by Goldstücker — IV Drip Therapy in Alicante">
+<meta property="og:description" content="Your body deserves the best. Personalised IV drip protocols in the heart of Alicante.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://oasebygoldstucker.com">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "OASE by Goldstücker",
+  "description": "Specialised IV drip therapy and longevity clinic in Alicante",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "C. Poeta Quintana 62, P0004",
+    "addressLocality": "Alicante",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34644105891",
+  "medicalSpecialty": "Wellness and Longevity"
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #2b3f52;
+    --navy-deep: #1a2a38;
+    --navy-light: #3d5468;
+    --gold: #d4a94a;
+    --gold-light: #e8c97a;
+    --gold-pale: #f5e9cc;
+    --sand: #f7f4ef;
+    --white: #ffffff;
+    --text-dark: #1a2a38;
+    --text-mid: #4a6070;
+    --text-light: #8a9fab;
+    --border: rgba(43,63,82,0.12);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    color: var(--text-dark);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 24px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.4s ease;
+  }
+  nav.scrolled {
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    padding: 16px 60px;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--white);
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: color 0.4s;
+  }
+  nav.scrolled .nav-logo { color: var(--navy); }
+  .nav-logo span {
+    font-size: 10px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.25em;
+    display: block;
+    margin-top: 2px;
+    color: var(--gold-light);
+    transition: color 0.4s;
+  }
+  nav.scrolled .nav-logo span { color: var(--gold); }
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  nav.scrolled .nav-links a { color: var(--text-mid); }
+  .nav-links a:hover { color: var(--gold); }
+  nav.scrolled .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 0.5px solid var(--gold-light);
+    padding: 10px 24px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .nav-cta:hover { background: var(--gold); color: var(--white); }
+  nav.scrolled .nav-cta { color: var(--navy); border-color: var(--navy); }
+  nav.scrolled .nav-cta:hover { background: var(--navy); color: var(--white); }
+
+  /* HERO */
+  .hero {
+    height: 100vh;
+    min-height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    /* Alicante beach - Postiguet beach with castle in background */
+    background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1900&q=85') center/cover no-repeat;
+    transform: scale(1.05);
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(26,42,56,0.52) 0%, rgba(26,42,56,0.28) 50%, rgba(26,42,56,0.65) 100%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 20px;
+    max-width: 860px;
+  }
+  .hero-eyebrow {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 1s 0.3s forwards;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(52px, 8vw, 96px);
+    line-height: 1.0;
+    color: var(--white);
+    letter-spacing: -0.01em;
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 1s 0.5s forwards;
+  }
+  .hero-title em { font-style: italic; color: var(--gold-light); }
+  .hero-subtitle {
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.75);
+    line-height: 2;
+    margin-bottom: 52px;
+    opacity: 0;
+    animation: fadeUp 1s 0.7s forwards;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 1s 0.9s forwards;
+  }
+  .btn-primary {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: var(--gold);
+    color: var(--white);
+    padding: 16px 40px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-primary:hover { background: var(--gold-light); }
+  .btn-outline {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 0.5px solid rgba(255,255,255,0.5);
+    color: var(--white);
+    padding: 16px 40px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+  .hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    animation: fadeIn 1s 1.5s forwards;
+  }
+  .hero-scroll span {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  .scroll-line {
+    width: 0.5px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+    animation: scrollPulse 2s infinite;
+  }
+
+  /* SECTION SHARED */
+  section { padding: 100px 60px; }
+  .section-eyebrow {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.15;
+    color: var(--navy);
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .divider {
+    width: 40px;
+    height: 0.5px;
+    background: var(--gold);
+    margin: 28px 0;
+  }
+
+  /* INTRO */
+  .intro {
+    background: var(--sand);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .intro-text p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 2;
+    color: var(--text-mid);
+    margin-bottom: 20px;
+  }
+  .intro-image {
+    position: relative;
+    height: 520px;
+  }
+  .intro-image::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: 20px;
+    bottom: 20px;
+    border: 0.5px solid var(--gold);
+    z-index: 0;
+  }
+  .intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* QUOTE BANNER */
+  .quote-banner {
+    background: var(--navy);
+    text-align: center;
+    padding: 80px 60px;
+  }
+  .quote-banner blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(24px, 3vw, 40px);
+    color: var(--white);
+    line-height: 1.5;
+    max-width: 760px;
+    margin: 0 auto 20px;
+  }
+  .quote-banner cite {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-style: normal;
+  }
+
+  /* PROCESS */
+  .process { background: var(--white); }
+  .process-header { text-align: center; margin-bottom: 70px; }
+  .process-header .divider { margin: 28px auto; }
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 0.5px solid var(--border);
+  }
+  .process-step {
+    background: var(--white);
+    padding: 48px 36px;
+    transition: background 0.3s;
+  }
+  .process-step:hover { background: var(--sand); }
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 48px;
+    color: var(--gold-pale);
+    line-height: 1;
+    margin-bottom: 24px;
+  }
+  .step-title {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .step-desc {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--text-mid);
+  }
+
+  /* SERVICES */
+  .services { background: var(--sand); }
+  .services-header { text-align: center; margin-bottom: 70px; }
+  .services-header .divider { margin: 28px auto; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border);
+  }
+  .service-card {
+    background: var(--white);
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .service-img {
+    height: 260px;
+    overflow: hidden;
+  }
+  .service-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+  }
+  .service-card:hover .service-img img { transform: scale(1.06); }
+  .service-body { padding: 36px 32px; }
+  .service-line {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 26px;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .service-desc {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 2;
+    color: var(--text-mid);
+  }
+
+  /* ALICANTE PHOTO STRIP */
+  .photo-strip {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    height: 420px;
+    gap: 2px;
+    background: var(--navy-deep);
+  }
+  .strip-photo {
+    overflow: hidden;
+    position: relative;
+  }
+  .strip-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+    filter: brightness(0.88) saturate(1.1);
+  }
+  .strip-photo:hover img { transform: scale(1.05); filter: brightness(1) saturate(1.2); }
+  .strip-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    z-index: 1;
+  }
+
+  /* QUOTE 2 */
+  .quote2 {
+    padding: 120px 60px;
+    background: url('https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&q=80') center/cover;
+    position: relative;
+    text-align: center;
+  }
+  .quote2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(26,42,56,0.68);
+  }
+  .quote2 > * { position: relative; z-index: 1; }
+  .quote2 p {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(22px, 3vw, 38px);
+    color: var(--white);
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .quote2 p em { color: var(--gold-light); font-style: normal; }
+
+  /* REVIEWS */
+  .reviews { background: var(--white); }
+  .reviews-header { text-align: center; margin-bottom: 60px; }
+  .reviews-header .divider { margin: 28px auto; }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .review-card {
+    border: 0.5px solid var(--border);
+    padding: 40px 36px;
+    transition: border-color 0.3s;
+  }
+  .review-card:hover { border-color: var(--gold); }
+  .review-stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 24px;
+  }
+  .star {
+    width: 12px;
+    height: 12px;
+    background: var(--gold);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+  .review-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text-mid);
+    margin-bottom: 28px;
+  }
+  .review-author {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--navy);
+  }
+  .review-location {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--text-light);
+    margin-top: 4px;
+  }
+
+  /* WHY */
+  .why { background: var(--navy); color: var(--white); }
+  .why-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .why-text .section-eyebrow { color: var(--gold-light); }
+  .why-text .section-title { color: var(--white); }
+  .why-text .section-title em { color: var(--gold-light); }
+  .why-text p {
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 2;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 16px;
+  }
+  .why-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: rgba(255,255,255,0.06);
+  }
+  .why-item {
+    background: rgba(255,255,255,0.03);
+    padding: 36px 28px;
+    border-left: 2px solid transparent;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .why-item:hover { border-left-color: var(--gold); background: rgba(212,169,74,0.06); }
+  .why-item-icon { font-size: 22px; margin-bottom: 16px; color: var(--gold); }
+  .why-item-title {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .why-item-desc {
+    font-size: 13px;
+    font-weight: 200;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* CONTACT */
+  .contact { background: var(--sand); }
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .contact-details { margin-top: 40px; }
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px 0;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    border: 0.5px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 16px;
+    color: var(--gold);
+  }
+  .contact-label {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 6px;
+  }
+  .contact-value {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1.6;
+  }
+  .form-group { margin-bottom: 20px; }
+  .form-group label {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 8px;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 0;
+    border: none;
+    border-bottom: 0.5px solid var(--border);
+    background: transparent;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--navy);
+    outline: none;
+    transition: border-color 0.3s;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-bottom-color: var(--gold); }
+  .form-group textarea { resize: none; height: 80px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .form-submit {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    padding: 18px 48px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    margin-top: 8px;
+    font-family: 'Jost', sans-serif;
+  }
+  .form-submit:hover { background: var(--navy-deep); }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy-deep);
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-top: 0.5px solid rgba(212,169,74,0.2);
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--white);
+    letter-spacing: 0.08em;
+  }
+  .footer-logo span {
+    font-size: 9px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.3em;
+    display: block;
+    color: var(--gold);
+    margin-top: 4px;
+  }
+  .footer-tagline {
+    font-size: 10px;
+    font-weight: 200;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+  }
+  .footer-copy {
+    font-size: 11px;
+    font-weight: 200;
+    color: rgba(255,255,255,0.25);
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* MOBILE */
+  @media (max-width: 900px) {
+    nav { padding: 20px 24px; }
+    nav.scrolled { padding: 14px 24px; }
+    .nav-links { display: none; }
+    section { padding: 70px 24px; }
+    .intro { grid-template-columns: 1fr; gap: 40px; }
+    .intro-image { height: 340px; }
+    .process-grid { grid-template-columns: 1fr 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .why-inner { grid-template-columns: 1fr; gap: 40px; }
+    .why-items { grid-template-columns: 1fr; }
+    .contact-inner { grid-template-columns: 1fr; gap: 50px; }
+    .form-row { grid-template-columns: 1fr; }
+    footer { padding: 40px 24px; flex-direction: column; text-align: center; }
+    .quote-banner { padding: 60px 24px; }
+    .quote2 { padding: 80px 24px; }
+    .photo-strip { grid-template-columns: 1fr 1fr; height: 300px; }
+    .photo-strip .strip-photo:last-child { display: none; }
+  }
+  @media (max-width: 600px) {
+    .process-grid { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#home" class="nav-logo">OASE<span>BY GOLDSTÜCKER</span></a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book a session</a>
+</nav>
+
+<!-- HERO — Alicante coastline -->
+<section class="hero" id="home">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Alicante · IV Drip Therapy & Longevity</p>
+    <h1 class="hero-title">Wellness,<br><em>from within.</em></h1>
+    <p class="hero-subtitle">Personalised IV protocols · Full medical assessment<br>Deep hydration · Limitless vitality</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn-primary">Our protocols</a>
+      <a href="#process" class="btn-outline">How it works</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Discover</span>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="intro-text reveal">
+    <p class="section-eyebrow">Welcome to OASE</p>
+    <h2 class="section-title">Where science<br>meets the <em>sea.</em></h2>
+    <div class="divider"></div>
+    <p>At OASE by Goldstücker we believe that real wellness begins with understanding your body. Before any treatment, we carry out a comprehensive medical assessment: we analyse your metabolism, your physiological stress levels, and your nutritional status.</p>
+    <p>Every drip we prepare is a precise response to what your body needs right now. No generic protocols. Just yours.</p>
+    <p>Set in the heart of Alicante, with the Mediterranean as our backdrop, OASE is where precision medicine and genuine luxury converge.</p>
+  </div>
+  <div class="intro-image reveal">
+    <!-- Alicante Castle / Santa Bárbara with sea view -->
+    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80" alt="Alicante Mediterranean coast" loading="lazy">
+  </div>
+</section>
+
+<!-- QUOTE BANNER -->
+<div class="quote-banner">
+  <blockquote>"The body remembers every moment of care you give it. This is where we begin."</blockquote>
+  <cite>OASE by Goldstücker</cite>
+</div>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="process-header reveal">
+    <p class="section-eyebrow">Your path to wellness</p>
+    <h2 class="section-title">A process designed<br><em>for you.</em></h2>
+    <div class="divider"></div>
+  </div>
+  <div class="process-grid reveal">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <h3 class="step-title">Medical assessment</h3>
+      <p class="step-desc">We begin with a full examination measuring your metabolic state, hormonal levels, degree of oxidative stress and nutritional deficiencies. The foundation of everything that follows.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <h3 class="step-title">Personalised diagnosis</h3>
+      <p class="step-desc">Our medical team interprets your results and designs an exclusive protocol for your profile. Every formula responds to your real needs — not trends.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <h3 class="step-title">IV session</h3>
+      <p class="step-desc">In a private, serene environment, you receive your drip in 45–60 minutes. Direct bloodstream absorption for an efficacy that no oral supplement can match.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <h3 class="step-title">Ongoing follow-up</h3>
+      <p class="step-desc">We monitor your progress and refine your protocol with each visit. Wellness is not a destination — it is a living process that grows with you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header reveal">
+    <p class="section-eyebrow">Our protocols</p>
+    <h2 class="section-title">Two lines of<br><em>excellence.</em></h2>
+    <div class="divider"></div>
+  </div>
+  <div class="services-grid reveal">
+    <div class="service-card">
+      <div class="service-img">
+        <!-- Alicante Postiguet beach -->
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80" alt="Essential line IV drip therapy" loading="lazy">
+      </div>
+      <div class="service-body">
+        <p class="service-line">Entry · Wellness</p>
+        <h3 class="service-name">Essential Line</h3>
+        <p class="service-desc">Seven essential protocols for those beginning their wellness journey: Beauty, Energy, Defense, Recover, Reset Detox, Balance and Titan. Each session from 185€.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img">
+        <!-- Mediterranean water clarity -->
+        <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=700&q=80" alt="Elite line longevity IV therapy" loading="lazy">
+      </div>
+      <div class="service-body">
+        <p class="service-line">Premium · Longevity</p>
+        <h3 class="service-name">Elite Line</h3>
+        <p class="service-desc">For those who demand the very best from their body. Radiance, Shield, Boost, Clarity, Reset, Eternal and Ocean. Advanced formulas with maximum-bioavailability ingredients. From 220€.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img">
+        <!-- Alicante natural landscape -->
+        <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=700&q=80" alt="Goldstücker medical evaluation" loading="lazy">
+      </div>
+      <div class="service-body">
+        <p class="service-line">Exclusive · First step</p>
+        <h3 class="service-name">Goldstücker Evaluation</h3>
+        <p class="service-desc">The cornerstone of OASE. Full metabolic examination, cellular stress analysis and design of your personalised drip therapy plan. The first step is always knowing you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALICANTE PHOTO STRIP -->
+<div class="photo-strip reveal">
+  <!-- Alicante bay panorama -->
+  <div class="strip-photo">
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85" alt="Alicante bay">
+    <span class="strip-label">Alicante Bay</span>
+  </div>
+  <!-- Mediterranean crystal water -->
+  <div class="strip-photo">
+    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=85" alt="Mediterranean sea">
+    <span class="strip-label">Mediterranean</span>
+  </div>
+  <!-- Palm lined promenade / coastal nature -->
+  <div class="strip-photo">
+    <img src="https://images.unsplash.com/photo-1499678329028-101435549a4e?w=600&q=85" alt="Alicante promenade">
+    <span class="strip-label">Costa Blanca</span>
+  </div>
+</div>
+
+<!-- QUOTE 2 -->
+<div class="quote2">
+  <p>"Water doesn't just hydrate. <em>It transforms your wellbeing from the inside out.</em>"</p>
+</div>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="reviews-header reveal">
+    <p class="section-eyebrow">Real experiences</p>
+    <h2 class="section-title">What our clients<br><em>say.</em></h2>
+    <div class="divider"></div>
+  </div>
+  <div class="reviews-grid reveal">
+    <div class="review-card">
+      <div class="review-stars">
+        <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+      </div>
+      <p class="review-text">"I came in with chronic fatigue and energy levels at rock bottom. After the initial assessment and three Elite Line sessions, I feel like I did ten years ago. I never thought something like this was possible."</p>
+      <p class="review-author">Sofía M.</p>
+      <p class="review-location">Alicante</p>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">
+        <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+      </div>
+      <p class="review-text">"The level of personalisation is impressive. It's nothing like going for a generic drip — they study you, listen to you and design something specifically for you. The space is beautiful and the team is exceptional."</p>
+      <p class="review-author">Carlos R.</p>
+      <p class="review-location">Valencia</p>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">
+        <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+      </div>
+      <p class="review-text">"I was visiting Alicante and took the chance to book a Beauty session. My skin looked incredible for weeks afterwards. Now I plan my trips around being able to come back. It's my luxury ritual."</p>
+      <p class="review-author">Isabelle D.</p>
+      <p class="review-location">Paris / Alicante</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY OASE -->
+<section class="why">
+  <div class="why-inner">
+    <div class="why-text reveal">
+      <p class="section-eyebrow">Why OASE</p>
+      <h2 class="section-title">Precision<br><em>medicine.</em></h2>
+      <div class="divider" style="background: rgba(212,169,74,0.5);"></div>
+      <p>At OASE we don't administer drips — we administer solutions. Every component of your protocol has been selected based on your real biology, not market trends.</p>
+      <p>We are the only clinic in Alicante that integrates a full metabolic assessment as a mandatory starting point. Because without a diagnosis, there is no treatment — only routine.</p>
+    </div>
+    <div class="why-items reveal">
+      <div class="why-item">
+        <div class="why-item-icon">◈</div>
+        <h3 class="why-item-title">Initial assessment</h3>
+        <p class="why-item-desc">Metabolic and oxidative stress examination before any treatment. Your biology first, always.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-item-icon">◈</div>
+        <h3 class="why-item-title">Exclusive formulas</h3>
+        <p class="why-item-desc">Each drip is formulated specifically for you. No generic protocols, no one-size-fits-all solutions.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-item-icon">◈</div>
+        <h3 class="why-item-title">Medical supervision</h3>
+        <p class="why-item-desc">The entire process under constant professional oversight. Safety and efficacy are non-negotiable.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-item-icon">◈</div>
+        <h3 class="why-item-title">Direct absorption</h3>
+        <p class="why-item-desc">Intravenous delivery for 100% bioavailability. What your body needs, exactly where it needs it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info reveal">
+      <p class="section-eyebrow">Find us</p>
+      <h2 class="section-title">Begin your<br><em>transformation.</em></h2>
+      <div class="divider"></div>
+      <p style="font-size:14px;font-weight:300;line-height:2;color:var(--text-mid);margin-bottom:8px;">Book your initial medical assessment and discover what your body truly needs. Precision wellness is within reach.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <p class="contact-label">Address</p>
+            <p class="contact-value">C. Poeta Quintana 62, P0004<br>Alicante, Spain</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <p class="contact-label">Phone</p>
+            <p class="contact-value"><a href="tel:+34644105891" style="color:var(--navy);text-decoration:none;">+34 644 10 58 91</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <p class="contact-label">Opening hours</p>
+            <p class="contact-value">Mon – Fri · 9:00 – 20:00<br>Saturday · 10:00 – 15:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <p class="section-eyebrow" style="margin-bottom:8px;">Request an appointment</p>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:28px;color:var(--navy);margin-bottom:32px;">Your first consultation,<br><em style="font-style:italic;color:var(--gold);">no commitment.</em></h3>
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="+34 6XX XXX XXX">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="you@email.com" required>
+        </div>
+        <div class="form-group">
+          <label>Service of interest</label>
+          <select>
+            <option value="">Select</option>
+            <option>Initial medical assessment</option>
+            <option>Essential Line (from 185€)</option>
+            <option>Elite Line (from 220€)</option>
+            <option>Not sure yet — I'd like advice</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message (optional)</label>
+          <textarea placeholder="Tell us briefly about your goal…"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Request appointment →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">OASE<span>BY GOLDSTÜCKER</span></div>
+  <p class="footer-tagline">Feel well · Look better · Live your best version</p>
+  <p class="footer-copy">© 2025 OASE by Goldstücker · Alicante, Spain</p>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  const heroBg = document.getElementById('heroBg');
+  window.addEventListener('scroll', () => {
+    heroBg.style.transform = `scale(1.05) translateY(${window.scrollY * 0.25}px)`;
+  });
+
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = 'Message sent ✓';
+    btn.style.background = '#2b3f52';
+    btn.disabled = true;
+  }
+</script>
+</body>
+</html>
